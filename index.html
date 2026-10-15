@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caffè Veloura | Luxury European Specialty Coffee & Artisanal Pâtisserie</title>
+  <meta name="description"
+    content="An artful pause in every pour. Experience Caffè Veloura, a luxury European specialty café bringing artisanal espresso extraction, rare single-origin coffees, and fine French pâtisserie to life.">
+
+  <!-- Favicon with custom elegant monogram -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2330211D'/><path d='M35 32 Q50 18 65 32 Q50 46 35 32 Z' fill='%23C3A36B'/><path d='M30 45 C30 68 70 68 70 45 Z' fill='none' stroke='%23C3A36B' stroke-width='4'/><path d='M70 48 C76 48 80 52 80 57 C80 62 76 66 70 66' fill='none' stroke='%23C3A36B' stroke-width='4'/><line x1='25' y1='75' x2='75' y2='75' stroke='%23C3A36B' stroke-width='4' stroke-linecap='round'/></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            espresso: {
+              DEFAULT: '#30211D',
+              deep: '#1F1412',
+              surface: '#291B17',
+              card: '#3D2B26',
+              light: '#4A342E',
+            },
+            ivory: {
+              DEFAULT: '#F5EFE5',
+              pure: '#FAF7F2',
+              cream: '#ECE3D3',
+              muted: '#E0D4C0',
+            },
+            gold: {
+              DEFAULT: '#C3A36B',
+              light: '#D8BD8C',
+              dark: '#A58650',
+              subtle: 'rgba(195, 163, 107, 0.15)',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body
+  class="bg-ivory text-espresso dark:bg-espresso-deep dark:text-ivory antialiased selection:bg-gold selection:text-espresso-deep transition-colors duration-500">
+
+  <!-- =========================================================================
+       NAVIGATION BAR (Sticky, Glassmorphism, Theme Switcher & Mobile Drawer)
+       ========================================================================= -->
+  <header id="main-header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-ivory/95 dark:bg-espresso-deep/95 glass-header border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between gap-4">
+
+      <!-- Brand Logo / Wordmark -->
+      <a href="#hero"
+        class="flex items-center gap-3.5 shrink-0 mr-6 lg:mr-8 xl:mr-12 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
+        aria-label="Caffè Veloura Home">
+        <div
+          class="relative w-11 h-11 rounded-full border border-gold/70 bg-espresso text-gold dark:bg-gold dark:text-espresso-deep transition-all duration-300 group-hover:scale-105 group-hover:border-gold shadow-sm shrink-0 flex items-center justify-center">
+          <div
+            class="w-9 h-9 rounded-full border border-gold/30 dark:border-espresso-deep/30 flex items-center justify-center">
+            <!-- Bespoke luxury coffee cup with aromatic steam curl SVG -->
+            <svg class="w-5 h-5 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 9h1a3 3 0 0 1 0 6h-1" />
+              <path d="M4 9h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z" />
+              <path d="M7 3.5c0 1.2.8 1.8.8 2.5" />
+              <path d="M11 2.5c0 1.2.8 1.8.8 2.5" />
+              <path d="M15 3.5c0 1.2.8 1.8.8 2.5" />
+            </svg>
+          </div>
+        </div>
+        <span
+          class="font-serif text-2xl sm:text-[28px] tracking-[0.04em] font-medium text-espresso dark:text-ivory leading-none group-hover:text-gold transition-colors">
+          Veloura
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links (with whitespace-nowrap and responsive gaps) -->
+      <nav
+        class="hidden lg:flex items-center gap-3.5 xl:gap-6 2xl:gap-7 text-[11px] xl:text-xs uppercase tracking-[0.12em] xl:tracking-[0.16em] font-medium whitespace-nowrap"
+        aria-label="Main Navigation">
+        <a href="#hero" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Home</a>
+        <a href="#philosophy" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Our Story</a>
+        <a href="#coffee" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Coffee</a>
+        <a href="#desserts" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Desserts</a>
+        <a href="#menu" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Menu</a>
+        <a href="#brewing" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Brewing</a>
+        <a href="#experience" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Experience</a>
+        <a href="#reviews" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Reviews</a>
+        <a href="#contact" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Visit</a>
+      </nav>
+
+      <!-- Action Buttons: Theme Toggle & Reserve CTA -->
+      <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+        <!-- Theme Toggle Button -->
+        <button type="button"
+          class="theme-toggle-btn w-9 h-9 rounded-full border border-gold/30 hover:border-gold hover:bg-gold/10 transition-colors focus:outline-none focus:ring-2 focus:ring-gold flex items-center justify-center shrink-0"
+          aria-label="Toggle theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="theme-sun-icon w-4 h-4 text-gold hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="theme-moon-icon w-4 h-4 text-espresso" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Cart Button with Counter Badge (Replaces old Reserve CTA) -->
+        <button id="cart-drawer-toggle" type="button" aria-label="Open Cart"
+          class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded border border-gold bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-sm whitespace-nowrap shrink-0 focus:outline-none focus:ring-2 focus:ring-gold relative">
+          <svg class="w-4 h-4 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="hidden sm:inline font-sans">Cart</span>
+          <span id="cart-badge"
+            class="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-[11px] font-bold rounded-full bg-gold text-espresso-deep shadow-sm">0</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-toggle" type="button"
+          class="lg:hidden p-2 rounded text-espresso dark:text-ivory hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold shrink-0"
+          aria-label="Open mobile menu">
+          <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div id="mobile-menu-backdrop"
+    class="fixed inset-0 bg-espresso-deep/60 z-50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+  </div>
+  <aside id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-ivory-pure dark:bg-espresso z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-8 border-l border-gold/30 lg:hidden"
+    aria-label="Mobile Navigation">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-gold/20">
+        <span class="font-serif text-2xl text-espresso dark:text-ivory">Veloura</span>
+        <button id="mobile-menu-close" class="p-2 text-espresso dark:text-ivory hover:text-gold"
+          aria-label="Close mobile menu">
+          <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-4 mt-8 text-sm uppercase tracking-widest font-medium">
+        <a href="#hero"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Home</a>
+        <a href="#philosophy"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Our
+          Story</a>
+        <a href="#coffee"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Coffee
+          Collection</a>
+        <a href="#desserts"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Artisan
+          Desserts</a>
+        <a href="#menu"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Interactive
+          Menu</a>
+        <a href="#brewing"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">The Art of
+          Brewing</a>
+        <a href="#experience"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Inside
+          Veloura</a>
+        <a href="#reservations"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Reservations</a>
+        <a href="#reviews"
+          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Guest
+          Reviews</a>
+        <a href="#contact" class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold">Visit &
+          Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-gold/20 space-y-3">
+      <button id="mobile-cart-toggle" type="button"
+        class="w-full py-3 rounded border border-gold bg-gold/15 text-gold font-semibold tracking-wider text-xs uppercase flex items-center justify-center gap-2 hover:bg-gold hover:text-espresso-deep transition-colors">
+        <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <span>View Cart (<span class="mobile-cart-badge-count">0</span>)</span>
+      </button>
+      <a href="#reservations"
+        class="mobile-nav-link w-full text-center block py-3 rounded bg-gold text-espresso-deep font-semibold tracking-wider text-xs uppercase shadow hover:bg-gold-light transition-colors">
+        Reserve a Table
+      </a>
+      <p class="text-xs text-center text-espresso/60 dark:text-ivory/60 mt-4 font-serif italic">Via della Spiga 18,
+        Milano</p>
+    </div>
+  </aside>
+
+
+  <!-- =========================================================================
+       SECTION 1: LUXURY HERO EXPERIENCE
+       ========================================================================= -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <!-- Hero Background Visual with Atmospheric Lighting -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.pexels.com/photos/27626693/pexels-photo-27626693.png"
+        alt="Sophisticated European coffee bar with ambient lighting and brass details"
+        class="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 ease-out">
+      <!-- Dark overlay with warm gradient -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-espresso-deep via-espresso/80 to-espresso-deep/70 dark:from-espresso-deep dark:via-espresso-deep/90 dark:to-espresso-deep/75">
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center text-ivory-pure">
+      <!-- Crest Subtitle -->
+      <div
+        class="inline-flex items-center gap-3 mb-6 px-4 py-1.5 rounded-full border border-gold/40 bg-espresso-deep/50 backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-medium">Bespoke Roasters &bull; European
+          Pâtisserie</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight leading-[1.1] mb-6">
+        An Artful Pause in <span class="italic text-gold">Every Pour.</span>
+      </h1>
+
+      <!-- Editorial Narrative Description -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory/90 font-light leading-relaxed mb-10">
+        Step into an atmosphere of quiet European elegance. At Caffè Veloura, rare micro-lot beans meet classical
+        artisanal extraction, paired with delicately sculpted Viennese and Parisian pastries.
+      </p>
+
+      <!-- Two Premium CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <a href="#menu"
+          class="w-full sm:w-auto px-8 py-4 rounded bg-gold text-espresso-deep font-semibold text-xs uppercase tracking-[0.2em] shadow-lg hover:bg-gold-light hover:shadow-gold/20 transition-all duration-300 transform hover:-translate-y-0.5">
+          Explore Our Menu
+        </a>
+        <a href="#reservations"
+          class="w-full sm:w-auto px-8 py-4 rounded border border-gold/70 text-ivory hover:bg-gold/15 hover:border-gold font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 backdrop-blur-sm">
+          Reserve a Table
+        </a>
+      </div>
+
+      <!-- Hero Badges / Highlights -->
+      <div class="grid grid-cols-3 max-w-2xl mx-auto mt-16 pt-8 border-t border-gold/20 text-center gap-4">
+        <div>
+          <span class="block font-serif text-2xl sm:text-3xl text-gold font-light">100%</span>
+          <span class="text-[11px] sm:text-xs uppercase tracking-wider text-ivory/70">Arabica Heirloom</span>
+        </div>
+        <div class="border-x border-gold/20">
+          <span class="block font-serif text-2xl sm:text-3xl text-gold font-light">9 Bar</span>
+          <span class="text-[11px] sm:text-xs uppercase tracking-wider text-ivory/70">Precision Pressure</span>
+        </div>
+        <div>
+          <span class="block font-serif text-2xl sm:text-3xl text-gold font-light">48 Hr</span>
+          <span class="text-[11px] sm:text-xs uppercase tracking-wider text-ivory/70">Slow Lamination</span>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="mt-12 flex flex-col items-center justify-center animate-bounce">
+        <a href="#philosophy"
+          class="text-gold/80 hover:text-gold flex flex-col items-center text-[10px] uppercase tracking-widest gap-2"
+          aria-label="Scroll to philosophy">
+          <span>Discover</span>
+          <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 2: OUR CAFÉ PHILOSOPHY
+       ========================================================================= -->
+  <section id="philosophy" class="py-24 sm:py-32 bg-ivory-pure dark:bg-espresso relative border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-xl mx-auto text-center mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Our Origin & Ethos</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">The Art of
+          Mindful Solitude</h2>
+        <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+      </div>
+
+      <!-- Split Editorial Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+        <!-- Left Column: Storytelling & 3 Key Highlights -->
+        <div class="lg:col-span-6 space-y-6 reveal-on-scroll">
+          <p class="font-serif text-2xl sm:text-3xl font-light text-espresso/90 dark:text-ivory/90 leading-snug">
+            "Coffee is not merely an awakening ritual; it is an architectural symphony of earth, craft, and
+            contemplation."
+          </p>
+          <p class="text-sm sm:text-base text-espresso/70 dark:text-ivory/70 leading-relaxed">
+            Founded with a reverent homage to historic Milanese espresso sanctuaries and Parisian salons de thé, Caffè
+            Veloura was designed for those who appreciate the grace of unhurried craftsmanship. We roast in
+            micro-batches, calibrating moisture, barometric pressure, and water mineral profiles to reveal the untamed
+            floral nuances of high-altitude beans.
+          </p>
+
+          <!-- 3 Concise Highlights -->
+          <div class="pt-6 space-y-6 border-t border-gold/20">
+
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full border border-gold/40 bg-gold/10 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12C20,13.78 19.42,15.42 18.45,16.76L15.3,13.61C15.74,12.78 16,11.85 16,10.87A4.87,4.87 0 0,0 11.13,6C10.15,6 9.22,6.26 8.39,6.7L12,4M6.7,8.39C6.26,9.22 6,10.15 6,11.13A4.87,4.87 0 0,0 10.87,16C11.85,16 12.78,15.74 13.61,15.3L16.76,18.45C15.42,19.42 13.78,20 12,20A8,8 0 0,1 4,12C4,10.22 4.58,8.58 5.55,7.24L6.7,8.39Z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-serif text-xl font-medium text-espresso dark:text-ivory">Ethically Sourced Beans</h3>
+                <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+                  Direct-trade alliances with boutique generational growers across Ethiopia, Colombia, and Guatemala
+                  ensure equitable compensation and sustainable terroir stewardship.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full border border-gold/40 bg-gold/10 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2M12 4C16.4 4 20 7.6 20 12C20 16.4 16.4 20 12 20C7.6 20 4 16.4 4 12C4 7.6 7.6 4 12 4M11 6V13L16.2 16.1L17 14.9L12.5 12.2V6H11Z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-serif text-xl font-medium text-espresso dark:text-ivory">Crafted with Precision</h3>
+                <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+                  Every extraction is dialed in three times daily by Master Baristas, calibrated by gram, temperature
+                  curve, and extraction pressure.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full border border-gold/40 bg-gold/10 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-serif text-xl font-medium text-espresso dark:text-ivory">Moments Made Special</h3>
+                <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+                  Served in handcrafted Italian porcelain with curated acoustic jazz, creating an intimate sanctuary
+                  away from the hurried world.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Editorial Photograph Composition -->
+        <div class="lg:col-span-6 relative reveal-on-scroll">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Main Photo -->
+            <div class="overflow-hidden rounded-lg shadow-2xl border border-gold/30 hover-zoom-container">
+              <img src="https://images.pexels.com/photos/29269652/pexels-photo-29269652.jpeg"
+                alt="Master barista delicately pouring swan latte art into a ceramic cup"
+                class="w-full h-[460px] sm:h-[520px] object-cover hover-zoom-img">
+            </div>
+
+            <!-- Overlaid Editorial Card -->
+            <div
+              class="absolute -bottom-8 -left-6 sm:-left-8 bg-ivory-pure dark:bg-espresso-card p-6 rounded border border-gold/40 shadow-xl max-w-xs glass-header">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold block mb-1">Estate Single
+                Origin</span>
+              <p class="font-serif text-lg font-medium text-espresso dark:text-ivory">Ethiopian Gesha Village 1931</p>
+              <p class="text-xs text-espresso/60 dark:text-ivory/60 mt-1">Sun-dried natural process with aromatic notes
+                of bergamot and honey jasmine.</p>
+            </div>
+
+            <!-- Floating Accent Frame -->
+            <div class="absolute -top-4 -right-4 w-32 h-32 border-2 border-gold/30 rounded-lg -z-10 hidden sm:block">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 3: SIGNATURE COFFEE COLLECTION
+       ========================================================================= -->
+  <section id="coffee" class="py-24 sm:py-32 bg-ivory dark:bg-espresso-deep border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal-on-scroll">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Artisanal Extractions</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 text-espresso dark:text-ivory">Signature Coffee
+            Collection</h2>
+          <div class="w-16 h-0.5 bg-gold mt-3"></div>
+        </div>
+        <p class="max-w-md text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 leading-relaxed">
+          Four bespoke beverage creations curated by our head roaster, marrying rare heirloom espresso with organic
+          infusions and velvety textured microfoam.
+        </p>
+      </div>
+
+      <!-- 4 Signature Drinks Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Drink 1: Veloura Signature Latte -->
+        <div
+          class="group bg-ivory-pure dark:bg-espresso rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between h-full reveal-on-scroll">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-64 overflow-hidden hover-zoom-container bg-espresso-deep shrink-0">
+              <img src="https://images.pexels.com/photos/2089806/pexels-photo-2089806.jpeg"
+                alt="Veloura Signature Latte with intricate microfoam art"
+                class="w-full h-full object-cover hover-zoom-img">
+              <div
+                class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+                €7.50
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-gold font-medium block h-4">House
+                  Specialty</span>
+                <h3
+                  class="font-serif text-2xl font-medium text-espresso dark:text-ivory mt-1 mb-2 group-hover:text-gold transition-colors min-h-[3.75rem] sm:min-h-[4rem] flex items-start">
+                  Veloura Signature Latte
+                </h3>
+                <p
+                  class="text-xs text-espresso/70 dark:text-ivory/70 leading-relaxed min-h-[4.75rem] sm:min-h-[5rem] flex items-start">
+                  Double shot of single-origin Colombia Geisha, infused with Tahitian vanilla bean reduction and silky
+                  organic whole milk.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="px-6 py-3 border-t border-gold/15 flex items-center justify-between text-xs text-espresso/60 dark:text-ivory/60 shrink-0">
+            <span class="truncate mr-2">Sweet Cream &amp; Caramel</span>
+            <button type="button"
+              class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+              data-id="drink-1" data-name="Veloura Signature Latte" data-price="7.50"
+              data-image="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=85">
+              <span>Add to Cart</span>
+              <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Drink 2: Midnight Mocha -->
+        <div
+          class="group bg-ivory-pure dark:bg-espresso rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between h-full reveal-on-scroll">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-64 overflow-hidden hover-zoom-container bg-espresso-deep shrink-0">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=85"
+                alt="Midnight Mocha dusted with Venezuelan dark cacao"
+                class="w-full h-full object-cover hover-zoom-img">
+              <div
+                class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+                €8.20
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-gold font-medium block h-4">Single Origin
+                  Cacao</span>
+                <h3
+                  class="font-serif text-2xl font-medium text-espresso dark:text-ivory mt-1 mb-2 group-hover:text-gold transition-colors min-h-[3.75rem] sm:min-h-[4rem] flex items-start">
+                  Midnight Mocha
+                </h3>
+                <p
+                  class="text-xs text-espresso/70 dark:text-ivory/70 leading-relaxed min-h-[4.75rem] sm:min-h-[5rem] flex items-start">
+                  72% Venezuelan dark cacao ganache melted into espresso ristretto, touched with Madagascar sea salt and
+                  steamed oat milk.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="px-6 py-3 border-t border-gold/15 flex items-center justify-between text-xs text-espresso/60 dark:text-ivory/60 shrink-0">
+            <span class="truncate mr-2">Cacao &amp; Sea Salt</span>
+            <button type="button"
+              class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+              data-id="drink-2" data-name="Midnight Mocha" data-price="8.20"
+              data-image="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=85">
+              <span>Add to Cart</span>
+              <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Drink 3: Vanilla Cloud Cappuccino -->
+        <div
+          class="group bg-ivory-pure dark:bg-espresso rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between h-full reveal-on-scroll">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-64 overflow-hidden hover-zoom-container bg-espresso-deep shrink-0">
+              <img src="https://images.pexels.com/photos/36286311/pexels-photo-36286311.jpeg"
+                alt="Vanilla Cloud Cappuccino with rich velvety microfoam"
+                class="w-full h-full object-cover hover-zoom-img">
+              <div
+                class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+                €7.80
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-gold font-medium block h-4">Viennese
+                  Tribute</span>
+                <h3
+                  class="font-serif text-2xl font-medium text-espresso dark:text-ivory mt-1 mb-2 group-hover:text-gold transition-colors min-h-[3.75rem] sm:min-h-[4rem] flex items-start">
+                  Vanilla Cloud Cappuccino
+                </h3>
+                <p
+                  class="text-xs text-espresso/70 dark:text-ivory/70 leading-relaxed min-h-[4.75rem] sm:min-h-[5rem] flex items-start">
+                  Equal parts intense espresso extraction and ethereal aerated foam crowned with toasted Bourbon vanilla
+                  sugar crystals.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="px-6 py-3 border-t border-gold/15 flex items-center justify-between text-xs text-espresso/60 dark:text-ivory/60 shrink-0">
+            <span class="truncate mr-2">Toasted Sugar &amp; Cream</span>
+            <button type="button"
+              class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+              data-id="drink-3" data-name="Vanilla Cloud Cappuccino" data-price="7.80"
+              data-image="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=85">
+              <span>Add to Cart</span>
+              <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Drink 4: Golden Honey Flat White -->
+        <div
+          class="group bg-ivory-pure dark:bg-espresso rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between h-full reveal-on-scroll">
+          <div class="flex flex-col flex-1">
+            <div class="relative h-64 overflow-hidden hover-zoom-container bg-espresso-deep shrink-0">
+              <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=800&q=85"
+                alt="Golden Honey Flat White poured with precision microfoam"
+                class="w-full h-full object-cover hover-zoom-img">
+              <div
+                class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+                €7.20
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-gold font-medium block h-4">Alpine
+                  Botanical</span>
+                <h3
+                  class="font-serif text-2xl font-medium text-espresso dark:text-ivory mt-1 mb-2 group-hover:text-gold transition-colors min-h-[3.75rem] sm:min-h-[4rem] flex items-start">
+                  Golden Honey Flat White
+                </h3>
+                <p
+                  class="text-xs text-espresso/70 dark:text-ivory/70 leading-relaxed min-h-[4.75rem] sm:min-h-[5rem] flex items-start">
+                  Double ristretto layered with micro-textured whole milk and raw Italian wildflower honey, dusted with
+                  organic cinnamon bark.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="px-6 py-3 border-t border-gold/15 flex items-center justify-between text-xs text-espresso/60 dark:text-ivory/60 shrink-0">
+            <span class="truncate mr-2">Wild Honey &amp; Spice</span>
+            <button type="button"
+              class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+              data-id="drink-4" data-name="Golden Honey Flat White" data-price="7.20"
+              data-image="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=800&q=85">
+              <span>Add to Cart</span>
+              <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Button to scroll to full digital menu -->
+      <div class="text-center mt-14 reveal-on-scroll">
+        <a href="#menu"
+          class="inline-flex items-center gap-3 px-8 py-3.5 rounded border border-gold bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+          <span>View Full Menu</span>
+          <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 4: ARTISAN DESSERTS & PASTRIES
+       ========================================================================= -->
+  <section id="desserts" class="py-24 sm:py-32 bg-ivory-pure dark:bg-espresso border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-xl mx-auto text-center mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Haute Pâtisserie</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">Artisan Desserts
+          & Pastries</h2>
+        <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 leading-relaxed">
+          Baked fresh before dawn each morning using Normandy PDO butter, Valrhona single-origin chocolates, and organic
+          Mediterranean orchard fruits.
+        </p>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <!-- Asymmetrical Editorial Dessert Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+
+        <!-- Dessert 1: French Butter Croissant (Wide Feature, 7 cols) -->
+        <div
+          class="md:col-span-7 bg-ivory dark:bg-espresso-deep rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between group reveal-on-scroll">
+          <div class="relative h-72 sm:h-80 overflow-hidden hover-zoom-container">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=85"
+              alt="Golden flaky artisan French butter croissant" class="w-full h-full object-cover hover-zoom-img">
+            <div
+              class="absolute top-4 left-4 bg-espresso/90 text-gold text-xs tracking-wider uppercase px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+              48-Hour Laminated
+            </div>
+            <div
+              class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+              €5.50
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+            <div>
+              <h3
+                class="font-serif text-2xl sm:text-3xl font-medium text-espresso dark:text-ivory group-hover:text-gold transition-colors min-h-[2.25rem] sm:min-h-[2.5rem] flex items-start">
+                French Butter Croissant
+              </h3>
+              <p
+                class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 mt-2 leading-relaxed min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
+                Forty-eight layers of pure Charentes-Poitou PDO cultured butter fold through heritage French wheat.
+                Shatteringly crisp honeycomb exterior yielding to a pillow-soft, cloud-like center.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between gap-4 text-xs shrink-0">
+              <span class="text-gold truncate">Normandy Butter &bull; French Flour &bull; Guérande Salt</span>
+              <button type="button"
+                class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+                data-id="dessert-1" data-name="French Butter Croissant" data-price="5.50"
+                data-image="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=85">
+                <span>Add to Cart</span>
+                <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 2: Dark Chocolate Fondant (5 cols) -->
+        <div
+          class="md:col-span-5 bg-ivory dark:bg-espresso-deep rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between h-full group reveal-on-scroll">
+          <div class="relative h-72 sm:h-80 overflow-hidden hover-zoom-container shrink-0">
+            <img src="https://images.pexels.com/photos/33674402/pexels-photo-33674402.jpeg"
+              alt="Warm dark chocolate fondant with molten ganache center"
+              class="w-full h-full object-cover hover-zoom-img">
+            <div
+              class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+              €9.50
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+            <div>
+              <h3
+                class="font-serif text-2xl sm:text-3xl font-medium text-espresso dark:text-ivory group-hover:text-gold transition-colors min-h-[2.25rem] sm:min-h-[2.5rem] flex items-start">
+                Dark Chocolate Fondant
+              </h3>
+              <p
+                class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 mt-2 leading-relaxed min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
+                Warm 70% Guanaja chocolate gateau with a molten bittersweet center, paired with house-churned crème
+                fraîche and tart raspberry reduction.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between gap-4 text-xs shrink-0">
+              <span class="text-gold truncate">Valrhona Cacao &bull; Crème Fraîche</span>
+              <button type="button"
+                class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+                data-id="dessert-2" data-name="Dark Chocolate Fondant" data-price="9.50"
+                data-image="https://images.pexels.com/photos/33674402/pexels-photo-33674402.jpeg">
+                <span>Add to Cart</span>
+                <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 3: Pistachio Cream Tart (5 cols) -->
+        <div
+          class="md:col-span-5 bg-ivory dark:bg-espresso-deep rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between h-full group reveal-on-scroll">
+          <div class="relative h-72 sm:h-80 overflow-hidden hover-zoom-container shrink-0">
+            <img src="https://images.pexels.com/photos/29250525/pexels-photo-29250525.jpeg"
+              alt="Sicilian pistachio cream tart with delicate pastry shell"
+              class="w-full h-full object-cover hover-zoom-img">
+            <div
+              class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+              €8.50
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+            <div>
+              <h3
+                class="font-serif text-2xl sm:text-3xl font-medium text-espresso dark:text-ivory group-hover:text-gold transition-colors min-h-[2.25rem] sm:min-h-[2.5rem] flex items-start">
+                Pistachio Cream Tart
+              </h3>
+              <p
+                class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 mt-2 leading-relaxed min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
+                Crisp sablé breton pastry filled with roasted Bronte pistachio ganache, smooth white chocolate diplomat
+                cream, and crushed emerald praline.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between gap-4 text-xs shrink-0">
+              <span class="text-gold truncate">Bronte Pistachio &bull; Sablé Breton</span>
+              <button type="button"
+                class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+                data-id="dessert-3" data-name="Pistachio Cream Tart" data-price="8.50"
+                data-image="https://images.pexels.com/photos/29250525/pexels-photo-29250525.jpeg">
+                <span>Add to Cart</span>
+                <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 4: Raspberry Almond Financier (7 cols) -->
+        <div
+          class="md:col-span-7 bg-ivory dark:bg-espresso-deep rounded-lg overflow-hidden border border-gold/25 hover:border-gold transition-all duration-500 shadow-sm hover:shadow-xl flex flex-col justify-between h-full group reveal-on-scroll">
+          <div class="relative h-72 sm:h-80 overflow-hidden hover-zoom-container shrink-0">
+            <img src="https://images.pexels.com/photos/20598614/pexels-photo-20598614.jpeg"
+              alt="Freshly baked raspberry almond financier pastry" class="w-full h-full object-cover hover-zoom-img">
+            <div
+              class="absolute top-4 right-4 bg-espresso/90 text-gold text-xs font-serif px-3 py-1 rounded backdrop-blur-sm border border-gold/30">
+              €6.80
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+            <div>
+              <h3
+                class="font-serif text-2xl sm:text-3xl font-medium text-espresso dark:text-ivory group-hover:text-gold transition-colors min-h-[2.25rem] sm:min-h-[2.5rem] flex items-start">
+                Raspberry Almond Financier
+              </h3>
+              <p
+                class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 mt-2 leading-relaxed min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
+                Traditional French almond tea cake baked with browned hazelnut butter (beurre noisette), centered with
+                fresh wild raspberries and dusted with powdered vanilla sugar.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between gap-4 text-xs shrink-0">
+              <span class="text-gold truncate">Beurre Noisette &bull; Wild Berries</span>
+              <button type="button"
+                class="add-to-cart-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-gold/50 bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold font-medium text-[11px] transition-all duration-300 shrink-0"
+                data-id="dessert-4" data-name="Raspberry Almond Financier" data-price="6.80"
+                data-image="https://images.pexels.com/photos/20598614/pexels-photo-20598614.jpeg">
+                <span>Add to Cart</span>
+                <svg class="w-3 h-3 stroke-current" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 5: INTERACTIVE DIGITAL MENU
+       ========================================================================= -->
+  <section id="menu" class="py-24 sm:py-32 bg-ivory dark:bg-espresso-deep border-b border-gold/20">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-xl mx-auto text-center mb-12 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Carte Du Jour</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">Interactive
+          Digital Menu</h2>
+        <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 leading-relaxed">
+          Select a category below to explore our seasonal extractions, bespoke specialty infusions, and fine pâtisserie.
+        </p>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <!-- Interactive Category Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 reveal-on-scroll">
+        <button type="button" data-category="all"
+          class="menu-filter-btn active-filter px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold bg-gold text-espresso-deep shadow-sm">
+          All Offerings
+        </button>
+        <button type="button" data-category="espresso"
+          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          Espresso &amp; Coffee
+        </button>
+        <button type="button" data-category="signature"
+          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          Signature Drinks
+        </button>
+        <button type="button" data-category="tea"
+          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          Tea &amp; Refreshments
+        </button>
+        <button type="button" data-category="desserts"
+          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          Desserts &amp; Pastries
+        </button>
+      </div>
+
+      <!-- Menu Items Container (Editorial Two-Column List) -->
+      <div id="menu-items-grid" class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+
+        <!-- Category: Espresso & Coffee -->
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="espresso">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Single-Origin Espresso Ristretto
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€4.20</span>
+            <button type="button" aria-label="Add Single-Origin Espresso Ristretto to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-espresso-1" data-name="Single-Origin Espresso Ristretto" data-price="4.20"
+              data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Short, dense double extraction of washed Ethiopian Yirgacheffe. Jasmine, citrus oil, and raw cane sugar
+            notes.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="espresso">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              V60 Hand Pour-Over Reserve
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€6.80</span>
+            <button type="button" aria-label="Add V60 Hand Pour-Over Reserve to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-espresso-2" data-name="V60 Hand Pour-Over Reserve" data-price="6.80"
+              data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Delicate manual gravity extraction of Panama Gesha. Subtle peach blossom, black tea, and honeyed Meyer lemon
+            finish.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="espresso">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Café Cortado Cremoso
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€4.90</span>
+            <button type="button" aria-label="Add Café Cortado Cremoso to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-espresso-3" data-name="Café Cortado Cremoso" data-price="4.90"
+              data-image="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Equal measures of velvety double espresso and warm silky milk served in a faceted Gibraltar glass.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="espresso">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Traditional French Press
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€6.20</span>
+            <button type="button" aria-label="Add Traditional French Press to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-espresso-4" data-name="Traditional French Press" data-price="6.20"
+              data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Full-immersion 4-minute steep of Sumatran Arabica. Deep chocolate body, roasted cedar, and natural aromatic
+            oils.
+          </p>
+        </div>
+
+        <!-- Category: Signature Drinks -->
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="signature">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Veloura Signature Latte
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€7.50</span>
+            <button type="button" aria-label="Add Veloura Signature Latte to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-sig-1" data-name="Veloura Signature Latte" data-price="7.50"
+              data-image="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Single-origin Colombia Geisha with Tahitian vanilla bean reduction and micro-textured whole milk.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="signature">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Midnight Mocha Venezolana
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€8.20</span>
+            <button type="button" aria-label="Add Midnight Mocha Venezolana to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-sig-2" data-name="Midnight Mocha Venezolana" data-price="8.20"
+              data-image="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            72% Venezuelan dark cacao ganache, double espresso, sea salt, and steamed oat emulsion.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="signature">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Vanilla Cloud Cappuccino
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€7.80</span>
+            <button type="button" aria-label="Add Vanilla Cloud Cappuccino to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-sig-3" data-name="Vanilla Cloud Cappuccino" data-price="7.80"
+              data-image="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Intense espresso foundation layered under aerated vanilla microfoam dusted with golden caramelized sugar.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="signature">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Golden Honey Flat White
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€7.20</span>
+            <button type="button" aria-label="Add Golden Honey Flat White to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-sig-4" data-name="Golden Honey Flat White" data-price="7.20"
+              data-image="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Double ristretto, Italian wildflower honey, and microfoam crowned with fresh Ceylon cinnamon.
+          </p>
+        </div>
+
+        <!-- Category: Tea & Refreshments -->
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="tea">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Ceremonial Uji Matcha Latte
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€7.60</span>
+            <button type="button" aria-label="Add Ceremonial Uji Matcha Latte to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-tea-1" data-name="Ceremonial Uji Matcha Latte" data-price="7.60"
+              data-image="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Stone-ground Kyoto first-harvest ceremonial matcha whisked with oat milk and cold-pressed agave.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="tea">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Imperial Silver Needle White Tea
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€6.90</span>
+            <button type="button" aria-label="Add Imperial Silver Needle White Tea to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-tea-2" data-name="Imperial Silver Needle White Tea" data-price="6.90"
+              data-image="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Hand-plucked spring tea buds from Fujian. Exceptionally clean, soft melon notes, and gentle honeysuckle
+            fragrance.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="tea">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Sparkling Bergamot &amp; Elderflower Tonic
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€6.50</span>
+            <button type="button" aria-label="Add Sparkling Bergamot & Elderflower Tonic to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-tea-3" data-name="Sparkling Bergamot & Elderflower Tonic" data-price="6.50"
+              data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Calabrian bergamot essence, botanical elderflower cordial, sparkling spring water, and fresh rosemary sprig.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="tea">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Bourbon Vanilla Rooibos Tisane
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€5.80</span>
+            <button type="button" aria-label="Add Bourbon Vanilla Rooibos Tisane to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-tea-4" data-name="Bourbon Vanilla Rooibos Tisane" data-price="5.80"
+              data-image="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Naturally caffeine-free South African red bush infused with real Madagascar vanilla pods and sweet
+            chamomile.
+          </p>
+        </div>
+
+        <!-- Category: Desserts & Pastries -->
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="desserts">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              French Butter Croissant
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€5.50</span>
+            <button type="button" aria-label="Add French Butter Croissant to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-dessert-1" data-name="French Butter Croissant" data-price="5.50"
+              data-image="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            48-hour slow fermented dough laminated with French Charentes-Poitou cultured butter.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="desserts">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Dark Chocolate Fondant
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€9.50</span>
+            <button type="button" aria-label="Add Dark Chocolate Fondant to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-dessert-2" data-name="Dark Chocolate Fondant" data-price="9.50"
+              data-image="https://images.pexels.com/photos/33674402/pexels-photo-33674402.jpeg">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Warm 70% Guanaja chocolate gateau with a molten center and raspberry coulis.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="desserts">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Pistachio Cream Tart
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€8.50</span>
+            <button type="button" aria-label="Add Pistachio Cream Tart to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-dessert-3" data-name="Pistachio Cream Tart" data-price="8.50"
+              data-image="https://images.pexels.com/photos/29250525/pexels-photo-29250525.jpeg">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Sablé pastry filled with Bronte pistachio ganache and diplomat cream.
+          </p>
+        </div>
+
+        <div class="menu-item-card transition-all duration-300 pb-4 border-b border-gold/20" data-category="desserts">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-serif text-xl font-medium text-espresso dark:text-ivory flex-1">
+              Raspberry Almond Financier
+            </h4>
+            <span class="font-serif text-lg text-gold font-semibold shrink-0">€6.80</span>
+            <button type="button" aria-label="Add Raspberry Almond Financier to cart"
+              class="add-to-cart-btn p-1.5 rounded border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep text-gold transition-colors shrink-0"
+              data-id="menu-dessert-4" data-name="Raspberry Almond Financier" data-price="6.80"
+              data-image="https://images.pexels.com/photos/20598614/pexels-photo-20598614.jpeg">
+              <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mt-1 leading-relaxed">
+            Traditional tea cake with browned hazelnut butter and fresh wild raspberries.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Menu Note -->
+      <div
+        class="mt-12 p-4 rounded border border-gold/20 bg-ivory-pure/60 dark:bg-espresso-card/60 text-center text-xs text-espresso/60 dark:text-ivory/60">
+        <p>All dairy alternatives (organic oat, almond, and soy) are prepared with bespoke barista-formulated microfoam.
+          Please inform our staff of any dietary preferences.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 6: THE ART OF BREWING
+       ========================================================================= -->
+  <section id="brewing" class="py-24 sm:py-32 bg-ivory-pure dark:bg-espresso border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-2xl mx-auto text-center mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Specialty Extraction Methods</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">The Art of
+          Brewing</h2>
+        <p class="font-serif text-xl italic text-gold font-normal">
+          "Every Bean Has a Story. Every Brew Has a Character."
+        </p>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <!-- Interactive Brewing Method Selector Tabs -->
+      <div class="flex justify-center mb-12 reveal-on-scroll">
+        <div class="inline-flex p-1.5 rounded-lg border border-gold/30 bg-ivory dark:bg-espresso-deep gap-1 sm:gap-2">
+          <button type="button" data-method="pourover"
+            class="brew-tab-btn active-brew-tab px-4 sm:px-6 py-2.5 rounded-md text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold bg-gold/10 text-gold">
+            Pour-Over (V60 / Chemex)
+          </button>
+          <button type="button" data-method="espresso"
+            class="brew-tab-btn px-4 sm:px-6 py-2.5 rounded-md text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-transparent text-espresso/70 dark:text-ivory/70 hover:text-gold">
+            Espresso Extraction
+          </button>
+          <button type="button" data-method="frenchpress"
+            class="brew-tab-btn px-4 sm:px-6 py-2.5 rounded-md text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-transparent text-espresso/70 dark:text-ivory/70 hover:text-gold">
+            French Press
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Content Display (Grid: Image + Technical Specs) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- Left: Method Image -->
+        <div class="lg:col-span-6 relative reveal-on-scroll">
+          <div
+            class="rounded-lg overflow-hidden border border-gold/30 shadow-2xl bg-espresso-deep h-[380px] sm:h-[460px]">
+            <img id="brew-image" src="https://images.pexels.com/photos/8700714/pexels-photo-8700714.jpeg"
+              alt="Barista performing specialty pour-over coffee extraction with gooseneck kettle"
+              class="w-full h-full object-cover transition-opacity duration-300">
+          </div>
+        </div>
+
+        <!-- Right: Technical Details & Storytelling -->
+        <div id="brew-details-container" class="lg:col-span-6 space-y-6 transition-all duration-300 reveal-on-scroll">
+          <div>
+            <span id="brew-subtitle" class="text-xs uppercase tracking-[0.2em] text-gold font-semibold">
+              V60 &amp; Chemex Single-Origin Ritual
+            </span>
+            <h3 id="brew-title" class="font-serif text-3xl sm:text-4xl font-normal text-espresso dark:text-ivory mt-1">
+              Precision Pour-Over Extraction
+            </h3>
+          </div>
+
+          <p id="brew-description" class="text-sm sm:text-base text-espresso/80 dark:text-ivory/80 leading-relaxed">
+            A delicate manual extraction that unveils the subtle floral notes, delicate citrus brightness, and distinct
+            terroir of our Ethiopian and Geisha beans. Water is poured in concentric spirals at a precise 92°C with a
+            spiral flow rate.
+          </p>
+
+          <!-- Brewing Metric Cards -->
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded border border-gold/25 bg-ivory dark:bg-espresso-deep">
+              <span class="text-[10px] uppercase tracking-wider text-gold block">Selected Terroir</span>
+              <span id="brew-origin" class="font-serif text-base text-espresso dark:text-ivory font-medium mt-1 block">
+                Single-Origin Yirgacheffe &amp; Gesha Village
+              </span>
+            </div>
+            <div class="p-4 rounded border border-gold/25 bg-ivory dark:bg-espresso-deep">
+              <span class="text-[10px] uppercase tracking-wider text-gold block">Water Ratio</span>
+              <span id="brew-ratio" class="font-serif text-base text-espresso dark:text-ivory font-medium mt-1 block">
+                1:16 Coffee-to-Water
+              </span>
+            </div>
+            <div class="p-4 rounded border border-gold/25 bg-ivory dark:bg-espresso-deep">
+              <span class="text-[10px] uppercase tracking-wider text-gold block">Brew Temperature</span>
+              <span id="brew-temp" class="font-serif text-base text-espresso dark:text-ivory font-medium mt-1 block">
+                92°C / 197.6°F
+              </span>
+            </div>
+            <div class="p-4 rounded border border-gold/25 bg-ivory dark:bg-espresso-deep">
+              <span class="text-[10px] uppercase tracking-wider text-gold block">Extraction Time</span>
+              <span id="brew-time" class="font-serif text-base text-espresso dark:text-ivory font-medium mt-1 block">
+                3 min 15 sec
+              </span>
+            </div>
+          </div>
+
+          <!-- Tasting Notes -->
+          <div class="p-4 rounded border border-gold/30 bg-gold/5 flex items-start gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            <div>
+              <span class="text-[10px] uppercase tracking-wider text-gold font-bold block">Tasting Flavor Profile</span>
+              <p id="brew-flavors" class="text-xs sm:text-sm text-espresso/80 dark:text-ivory/80 mt-0.5">
+                Bergamot, Jasmine Blossom, White Peach &amp; Meyer Lemon
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 7: INSIDE THE VELOURA EXPERIENCE
+       ========================================================================= -->
+  <section id="experience" class="py-24 sm:py-32 bg-ivory dark:bg-espresso-deep border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-2xl mx-auto text-center mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">European Ambience</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">Inside the
+          Veloura Experience</h2>
+        <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 leading-relaxed">
+          A place designed for slow mornings, thoughtful conversations, and peaceful afternoon breaks. Warm brass
+          accents, fluted Carrara marble, and the comforting fragrance of freshly ground beans.
+        </p>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <!-- Asymmetric Editorial Photo Gallery -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+
+        <!-- Large Hero Card (7 cols) -->
+        <div
+          class="md:col-span-7 rounded-lg overflow-hidden border border-gold/30 shadow-md group relative h-80 sm:h-96 hover-zoom-container reveal-on-scroll">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=85"
+            alt="Warm European outdoor and interior café seating with brass bistro tables"
+            class="w-full h-full object-cover hover-zoom-img">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+            <span class="text-[10px] uppercase tracking-widest text-gold font-medium">Bespoke Interior</span>
+            <h3 class="font-serif text-2xl font-medium text-ivory">The Sunlit Solarium</h3>
+            <p class="text-xs text-ivory/80 mt-1 max-w-md">Overlooking the cobblestone courtyard, tailored for quiet
+              morning reading.</p>
+          </div>
+        </div>
+
+        <!-- Medium Card (5 cols) -->
+        <div
+          class="md:col-span-5 rounded-lg overflow-hidden border border-gold/30 shadow-md group relative h-80 sm:h-96 hover-zoom-container reveal-on-scroll">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1000&q=85"
+            alt="Carrara marble coffee bar with polished espresso equipment"
+            class="w-full h-full object-cover hover-zoom-img">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+            <span class="text-[10px] uppercase tracking-widest text-gold font-medium">Craft in Motion</span>
+            <h3 class="font-serif text-2xl font-medium text-ivory">Carrara Marble Bar</h3>
+            <p class="text-xs text-ivory/80 mt-1">Watch master baristas pull shots with precision and grace.</p>
+          </div>
+        </div>
+
+        <!-- Medium Card (5 cols) -->
+        <div
+          class="md:col-span-5 rounded-lg overflow-hidden border border-gold/30 shadow-md group relative h-80 sm:h-96 hover-zoom-container reveal-on-scroll">
+          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1000&q=85"
+            alt="Intimate cozy café corner with vintage books and warm lamp"
+            class="w-full h-full object-cover hover-zoom-img">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+            <span class="text-[10px] uppercase tracking-widest text-gold font-medium">Intimate Nooks</span>
+            <h3 class="font-serif text-2xl font-medium text-ivory">The Library Alcove</h3>
+            <p class="text-xs text-ivory/80 mt-1">Warm velvet upholstery, ambient lighting, and serene acoustic calm.
+            </p>
+          </div>
+        </div>
+
+        <!-- Large Card (7 cols) -->
+        <div
+          class="md:col-span-7 rounded-lg overflow-hidden border border-gold/30 shadow-md group relative h-80 sm:h-96 hover-zoom-container reveal-on-scroll">
+          <img src="https://images.pexels.com/photos/27626694/pexels-photo-27626694.png"
+            alt="Intimate café table with coffee cup, pastry, and flower vase"
+            class="w-full h-full object-cover hover-zoom-img">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+            <span class="text-[10px] uppercase tracking-widest text-gold font-medium">Afternoon Repose</span>
+            <h3 class="font-serif text-2xl font-medium text-ivory">Salon De Thé</h3>
+            <p class="text-xs text-ivory/80 mt-1 max-w-md">Curated afternoon pairings of fine single-origin infusions
+              and warm French pâtisserie.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 8: TABLE RESERVATIONS
+       ========================================================================= -->
+  <section id="reservations" class="py-24 sm:py-32 bg-ivory-pure dark:bg-espresso relative border-b border-gold/20">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-xl mx-auto text-center mb-12 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Reserve Your Sanctuary</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">Table
+          Reservations</h2>
+        <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 leading-relaxed">
+          Reserve an intimate table for morning meetings, coffee tastings, or leisurely afternoon desserts. We hold
+          reserved tables for 15 minutes.
+        </p>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <!-- Sophisticated Booking Form Card -->
+      <div
+        class="bg-ivory dark:bg-espresso-deep p-8 sm:p-12 rounded-xl border border-gold/30 shadow-2xl relative overflow-hidden reveal-on-scroll">
+
+        <!-- Subtle Decorative Corner Accents -->
+        <div class="absolute top-0 right-0 w-24 h-24 bg-gold/5 rounded-bl-full pointer-events-none"></div>
+
+        <form id="reservation-form" novalidate class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Full Name -->
+            <div>
+              <label for="res-name"
+                class="block text-xs uppercase tracking-wider font-semibold text-espresso dark:text-ivory mb-2">
+                Full Name <span class="text-gold">*</span>
+              </label>
+              <input type="text" id="res-name" name="name" required placeholder="Lord/Lady Sterling"
+                class="custom-input w-full px-4 py-3 rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory text-sm placeholder-espresso/40 dark:placeholder-ivory/40">
+              <span class="form-error-msg hidden text-xs text-red-500 mt-1 block">Please enter your full name (minimum 2
+                characters).</span>
+            </div>
+
+            <!-- Email Address -->
+            <div>
+              <label for="res-email"
+                class="block text-xs uppercase tracking-wider font-semibold text-espresso dark:text-ivory mb-2">
+                Email Address <span class="text-gold">*</span>
+              </label>
+              <input type="email" id="res-email" name="email" required placeholder="sterling@veloura.eu"
+                class="custom-input w-full px-4 py-3 rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory text-sm placeholder-espresso/40 dark:placeholder-ivory/40">
+              <span class="form-error-msg hidden text-xs text-red-500 mt-1 block">Please enter a valid email
+                address.</span>
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+              <label for="res-phone"
+                class="block text-xs uppercase tracking-wider font-semibold text-espresso dark:text-ivory mb-2">
+                Phone Number <span class="text-gold">*</span>
+              </label>
+              <input type="tel" id="res-phone" name="phone" required placeholder="+39 02 8945 2210"
+                class="custom-input w-full px-4 py-3 rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory text-sm placeholder-espresso/40 dark:placeholder-ivory/40">
+              <span class="form-error-msg hidden text-xs text-red-500 mt-1 block">Please enter a valid telephone
+                contact.</span>
+            </div>
+
+            <!-- Reservation Date (Past Dates Blocked) -->
+            <div>
+              <label for="res-date"
+                class="block text-xs uppercase tracking-wider font-semibold text-espresso dark:text-ivory mb-2">
+                Reservation Date <span class="text-gold">*</span>
+              </label>
+              <input type="date" id="res-date" name="date" required
+                class="custom-input w-full px-4 py-3 rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory text-sm">
+              <span class="form-error-msg hidden text-xs text-red-500 mt-1 block">Please select a valid upcoming
+                date.</span>
+            </div>
+
+            <!-- Preferred Time -->
+            <div>
+              <label for="res-time"
+                class="block text-xs uppercase tracking-wider font-semibold text-espresso dark:text-ivory mb-2">
+                Preferred Time <span class="text-gold">*</span>
+              </label>
+              <select id="res-time" name="time" required
+                class="custom-input w-full px-4 py-3 rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory text-sm">
+                <option value="" disabled selected>Select Seating Slot</option>
+                <option value="08:30 AM">08:30 AM — Morning Espresso &amp; Viennoiserie</option>
+                <option value="10:00 AM">10:00 AM — Morning Tasting Flight</option>
+                <option value="11:30 AM">11:30 AM — Midday Coffee &amp; Brunch</option>
+                <option value="01:30 PM">01:30 PM — Afternoon Digestif</option>
+                <option value="03:30 PM">03:30 PM — Salon De Thé &amp; Pâtisserie</option>
+                <option value="05:30 PM">05:30 PM — Golden Hour Espresso</option>
+                <option value="07:00 PM">07:00 PM — Evening Affogato &amp; Dessert</option>
+              </select>
+              <span class="form-error-msg hidden text-xs text-red-500 mt-1 block">Please select an available seating
+                slot.</span>
+            </div>
+
+            <!-- Number of Guests -->
+            <div>
+              <label for="res-guests"
+                class="block text-xs uppercase tracking-wider font-semibold text-espresso dark:text-ivory mb-2">
+                Number of Guests <span class="text-gold">*</span>
+              </label>
+              <select id="res-guests" name="guests" required
+                class="custom-input w-full px-4 py-3 rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory text-sm">
+                <option value="" disabled selected>Select Party Size</option>
+                <option value="1">1 Guest (Single Solitude Table)</option>
+                <option value="2">2 Guests (Bistro Table)</option>
+                <option value="3">3 Guests (Solarium Corner)</option>
+                <option value="4">4 Guests (Marble Salon Table)</option>
+                <option value="5">5 - 6 Guests (Library Alcove)</option>
+                <option value="7+">7+ Guests (Private Salon - Subject to Confirmation)</option>
+              </select>
+              <span class="form-error-msg hidden text-xs text-red-500 mt-1 block">Please select your party size.</span>
+            </div>
+
+          </div>
+
+          <!-- Special Requests (Optional) -->
+          <div>
+            <label for="res-requests"
+              class="block text-xs uppercase tracking-wider font-semibold text-espresso dark:text-ivory mb-2">
+              Special Requests or Dietary Preferences <span
+                class="text-xs text-gold/80 font-normal lowercase">(optional)</span>
+            </label>
+            <textarea id="res-requests" name="requests" rows="3"
+              placeholder="Dietary restrictions, window seating preference, anniversary celebration..."
+              class="custom-input w-full px-4 py-3 rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory text-sm placeholder-espresso/40 dark:placeholder-ivory/40"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="submit"
+              class="w-full sm:w-auto px-10 py-4 rounded bg-gold text-espresso-deep font-semibold text-xs uppercase tracking-[0.2em] shadow-lg hover:bg-gold-light hover:shadow-gold/20 transition-all duration-300 transform hover:-translate-y-0.5">
+              Reserve Your Table
+            </button>
+            <p class="text-xs text-espresso/60 dark:text-ivory/60 text-center sm:text-right">
+              No reservation fee required. Demo reservations validated immediately.
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <!-- Luxury Reservation Confirmation Modal -->
+    <div id="reservation-success-modal"
+      class="fixed inset-0 z-50 bg-espresso-deep/75 backdrop-blur-md hidden items-center justify-center p-4">
+      <div class="bg-ivory dark:bg-espresso border border-gold rounded-xl max-w-lg w-full p-8 shadow-2xl relative">
+        <div class="text-center">
+          <div
+            class="w-14 h-14 rounded-full bg-gold/15 border border-gold mx-auto flex items-center justify-center text-gold mb-4">
+            <svg class="w-8 h-8 stroke-current" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">Booking Confirmed</span>
+          <h3 class="font-serif text-3xl font-medium text-espresso dark:text-ivory mt-1 mb-3">Your Table Awaits</h3>
+          <p class="text-xs text-espresso/70 dark:text-ivory/70 mb-6">
+            We are honored to welcome you to Caffè Veloura. A confirmation notification has been recorded for your
+            party.
+          </p>
+        </div>
+
+        <!-- Booking Summary Details Box -->
+        <div id="modal-booking-summary"
+          class="bg-ivory-pure dark:bg-espresso-deep p-5 rounded-lg border border-gold/30 mb-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Explicit Demo Notice Required by Prompt -->
+        <div
+          class="p-3 bg-gold/10 rounded border border-gold/30 text-[11px] text-espresso/80 dark:text-ivory/80 text-center mb-6">
+          <strong>Demo Notice:</strong> This preview booking has been validated locally for demonstration purposes. No
+          live backend booking was created.
+        </div>
+
+        <button id="close-reservation-modal" type="button"
+          class="w-full py-3 rounded bg-gold text-espresso-deep font-semibold text-xs uppercase tracking-widest hover:bg-gold-light transition-colors">
+          Return to Experience
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 9: GUEST REVIEWS & CAFÉ MOMENTS
+       ========================================================================= -->
+  <section id="reviews" class="py-24 sm:py-32 bg-ivory dark:bg-espresso-deep border-b border-gold/20">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-xl mx-auto text-center mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Kind Words</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">Guest Reviews
+          &amp; Café Moments</h2>
+        <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+      </div>
+
+      <!-- Featured Experience Banner -->
+      <div
+        class="p-6 sm:p-8 rounded-xl border border-gold/30 bg-ivory-pure dark:bg-espresso mb-16 text-center max-w-3xl mx-auto shadow-sm reveal-on-scroll">
+        <span class="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold block mb-2">The Veloura
+          Promise</span>
+        <p class="font-serif text-2xl sm:text-3xl italic text-espresso dark:text-ivory font-normal">
+          "Your Everyday Escape, Beautifully Brewed."
+        </p>
+      </div>
+
+      <!-- Testimonial Carousel -->
+      <div class="relative max-w-4xl mx-auto">
+
+        <!-- Slide 1 -->
+        <div class="testimonial-slide opacity-100 transition-opacity duration-500">
+          <div
+            class="bg-ivory-pure dark:bg-espresso p-8 sm:p-12 rounded-xl border border-gold/25 shadow-xl text-center relative">
+            <div class="flex items-center justify-center gap-1 text-gold mb-6">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <p
+              class="font-serif text-xl sm:text-2xl font-light text-espresso dark:text-ivory leading-relaxed mb-6 italic">
+              "The single-origin V60 pour-over at Veloura is undeniably the finest cup of coffee I have tasted outside
+              of Florence. The croissant has forty-eight layers of pure heaven. It feels like a quiet sanctuary right in
+              the heart of the city."
+            </p>
+            <div class="flex items-center justify-center gap-3">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                alt="Claire Beaumont" class="w-12 h-12 rounded-full object-cover border border-gold">
+              <div class="text-left">
+                <h4 class="font-serif text-lg font-medium text-espresso dark:text-ivory leading-none">Claire Beaumont
+                </h4>
+                <span class="text-xs text-gold">Culinary Editor, Paris</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide hidden opacity-0 transition-opacity duration-500">
+          <div
+            class="bg-ivory-pure dark:bg-espresso p-8 sm:p-12 rounded-xl border border-gold/25 shadow-xl text-center relative">
+            <div class="flex items-center justify-center gap-1 text-gold mb-6">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <p
+              class="font-serif text-xl sm:text-2xl font-light text-espresso dark:text-ivory leading-relaxed mb-6 italic">
+              "An extraordinary masterclass in hospitality. The baristas speak of moisture levels and origin altitudes
+              with genuine passion. Sitting at the Carrara marble counter with the Midnight Mocha is my Saturday morning
+              therapy."
+            </p>
+            <div class="flex items-center justify-center gap-3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                alt="Matteo Rossi" class="w-12 h-12 rounded-full object-cover border border-gold">
+              <div class="text-left">
+                <h4 class="font-serif text-lg font-medium text-espresso dark:text-ivory leading-none">Matteo Rossi</h4>
+                <span class="text-xs text-gold">Architectural Designer, Milan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide hidden opacity-0 transition-opacity duration-500">
+          <div
+            class="bg-ivory-pure dark:bg-espresso p-8 sm:p-12 rounded-xl border border-gold/25 shadow-xl text-center relative">
+            <div class="flex items-center justify-center gap-1 text-gold mb-6">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <p
+              class="font-serif text-xl sm:text-2xl font-light text-espresso dark:text-ivory leading-relaxed mb-6 italic">
+              "The Pistachio Cream Tart combined with their Golden Honey Flat White is pure perfection. Caffè Veloura
+              has recaptured the romantic European café culture that modern coffee shops have long forgotten."
+            </p>
+            <div class="flex items-center justify-center gap-3">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+                alt="Elena von Berg" class="w-12 h-12 rounded-full object-cover border border-gold">
+              <div class="text-left">
+                <h4 class="font-serif text-lg font-medium text-espresso dark:text-ivory leading-none">Elena von Berg
+                </h4>
+                <span class="text-xs text-gold">Visual Artist, Vienna</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <div class="flex items-center justify-between mt-8 max-w-xs mx-auto">
+          <button id="prev-testimonial" type="button"
+            class="p-3 rounded-full border border-gold/40 hover:border-gold hover:bg-gold/10 text-espresso dark:text-ivory transition-colors"
+            aria-label="Previous review">
+            <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <!-- Dot Indicators -->
+          <div class="flex items-center gap-2">
+            <button class="testimonial-dot h-2.5 w-8 rounded-full bg-gold transition-all duration-300"
+              aria-label="Go to slide 1"></button>
+            <button
+              class="testimonial-dot h-2.5 w-2.5 rounded-full bg-gold/30 hover:bg-gold transition-all duration-300"
+              aria-label="Go to slide 2"></button>
+            <button
+              class="testimonial-dot h-2.5 w-2.5 rounded-full bg-gold/30 hover:bg-gold transition-all duration-300"
+              aria-label="Go to slide 3"></button>
+          </div>
+
+          <button id="next-testimonial" type="button"
+            class="p-3 rounded-full border border-gold/40 hover:border-gold hover:bg-gold/10 text-espresso dark:text-ivory transition-colors"
+            aria-label="Next review">
+            <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 10: CONTACT, VISIT & PREMIUM FOOTER
+       ========================================================================= -->
+  <section id="contact" class="pt-24 bg-ivory-pure dark:bg-espresso relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+      <!-- Section Header -->
+      <div class="max-w-xl mx-auto text-center mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Plan Your Visit</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2 mb-4 text-espresso dark:text-ivory">Visit Caffè
+          Veloura</h2>
+        <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 leading-relaxed">
+          We invite you to experience our espresso salon in person. Walk-ins are always welcomed at the marble counter.
+        </p>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <!-- Visit Grid: Details Card & Interactive Map Preview -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-20">
+
+        <!-- Visit Info Card (5 cols) -->
+        <div
+          class="lg:col-span-5 bg-ivory dark:bg-espresso-deep p-8 sm:p-10 rounded-xl border border-gold/30 shadow-lg flex flex-col justify-between space-y-8 reveal-on-scroll">
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-gold font-semibold block mb-2">Location &bull; Demo
+              Information</span>
+            <h3 class="font-serif text-2xl font-medium text-espresso dark:text-ivory mb-6">Via della Spiga, 18 &bull;
+              Milano</h3>
+
+            <div class="space-y-6 text-xs sm:text-sm text-espresso/80 dark:text-ivory/80">
+
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-9 h-9 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-espresso dark:text-ivory">Flagship Address (Sample)</h4>
+                  <p class="mt-0.5 leading-relaxed">Via della Spiga 18, Quadrilatero della Moda, 20121 Milano MI, Italy
+                  </p>
+                </div>
+              </div>
+
+              <!-- Opening Hours -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-9 h-9 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-espresso dark:text-ivory">Opening Hours</h4>
+                  <p class="mt-0.5">Monday – Friday: 07:30 – 19:30</p>
+                  <p>Saturday – Sunday: 08:30 – 20:30</p>
+                </div>
+              </div>
+
+              <!-- Contact Direct -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-9 h-9 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-espresso dark:text-ivory">Direct Inquiries</h4>
+                  <p class="mt-0.5">concierge@caffeveloura.eu</p>
+                  <p>+39 (02) 8945-2210</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <a href="#reservations"
+            class="w-full text-center block py-3 rounded bg-gold text-espresso-deep font-semibold tracking-wider text-xs uppercase shadow hover:bg-gold-light transition-colors">
+            Reserve a Table
+          </a>
+        </div>
+
+        <!-- Stylized Location / Map Preview Card (7 cols) -->
+        <div
+          class="lg:col-span-7 bg-ivory dark:bg-espresso-deep rounded-xl border border-gold/30 shadow-lg overflow-hidden relative min-h-[380px] flex flex-col justify-between p-8 reveal-on-scroll">
+          <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80"
+              alt="Chic Milanese architectural street view near Quadrilatero della Moda"
+              class="w-full h-full object-cover filter brightness-[0.7] dark:brightness-[0.45]">
+            <div class="absolute inset-0 bg-espresso-deep/40 backdrop-blur-[2px]"></div>
+          </div>
+
+          <div class="relative z-10 flex items-center justify-between">
+            <span
+              class="px-3.5 py-1.5 rounded-full bg-espresso-deep/80 text-gold text-xs font-semibold tracking-wider uppercase border border-gold/40">
+              Interactive Location Preview
+            </span>
+            <span class="text-xs text-ivory/80 font-mono">45.4704° N, 9.1983° E</span>
+          </div>
+
+          <!-- Centered Pin Visual -->
+          <div class="relative z-10 my-auto text-center py-10">
+            <div
+              class="w-16 h-16 rounded-full bg-gold/90 text-espresso-deep mx-auto flex items-center justify-center shadow-2xl animate-pulse mb-3">
+              <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12,2A10,10 0 0,0 2,12C2,17.5 12,22 12,22C12,22 22,17.5 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12C20,15.2 16.5,18.7 12,21.2C7.5,18.7 4,15.2 4,12A8,8 0 0,1 12,4M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+              </svg>
+            </div>
+            <h4 class="font-serif text-3xl font-medium text-ivory">Caffè Veloura Flagship</h4>
+            <p class="text-xs text-ivory/80 mt-1 max-w-sm mx-auto">Corner of Via della Spiga &bull; Valet parking
+              available on Via Manzoni</p>
+          </div>
+
+          <div
+            class="relative z-10 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-ivory/20 text-xs text-ivory/90">
+            <span>Nearest Metro: Montenapoleone (M3)</span>
+            <span class="text-gold font-medium">150m walk from Piazza San Babila</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- =======================================================================
+         PREMIUM FOOTER
+         ======================================================================= -->
+    <footer class="bg-ivory dark:bg-espresso-deep border-t border-gold/30 pt-16 pb-12">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+        <!-- Top Footer Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-gold/20">
+
+          <!-- Column 1: Brand Info (5 cols) -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="flex items-center gap-3.5">
+              <div
+                class="relative w-10 h-10 rounded-full border border-gold/70 bg-espresso text-gold dark:bg-gold dark:text-espresso-deep shadow-sm shrink-0 flex items-center justify-center">
+                <div
+                  class="w-8 h-8 rounded-full border border-gold/30 dark:border-espresso-deep/30 flex items-center justify-center">
+                  <svg class="w-4 h-4 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 9h1a3 3 0 0 1 0 6h-1" />
+                    <path d="M4 9h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z" />
+                    <path d="M7 3.5c0 1.2.8 1.8.8 2.5" />
+                    <path d="M11 2.5c0 1.2.8 1.8.8 2.5" />
+                    <path d="M15 3.5c0 1.2.8 1.8.8 2.5" />
+                  </svg>
+                </div>
+              </div>
+              <span class="font-serif text-2xl font-semibold tracking-wider text-espresso dark:text-ivory leading-none">
+                Veloura
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-espresso/70 dark:text-ivory/70 leading-relaxed max-w-sm">
+              An artful pause in every pour. Purveyors of single-origin heirloom coffees, traditional European espresso
+              extractions, and artisanal French pâtisserie.
+            </p>
+            <div class="pt-2">
+              <span class="text-xs uppercase tracking-widest text-gold font-semibold block mb-2">Connect With Us</span>
+
+              <!-- Updated Recognizable Social Media Icons -->
+              <div class="flex items-center gap-3">
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                  class="w-9 h-9 rounded-full border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep flex items-center justify-center text-gold transition-all duration-300"
+                  aria-label="Follow Caffè Veloura on Instagram">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                  class="w-9 h-9 rounded-full border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep flex items-center justify-center text-gold transition-all duration-300"
+                  aria-label="Follow Caffè Veloura on Facebook">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                </a>
+
+                <!-- Pinterest -->
+                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer"
+                  class="w-9 h-9 rounded-full border border-gold/40 hover:border-gold hover:bg-gold hover:text-espresso-deep flex items-center justify-center text-gold transition-all duration-300"
+                  aria-label="Follow Caffè Veloura on Pinterest">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.379-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 12-5.373 12-12 0-6.628-5.393-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Navigation Links (3 cols) -->
+          <div class="lg:col-span-3 space-y-3">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold block mb-2">Navigation</span>
+            <ul class="space-y-2 text-xs text-espresso/80 dark:text-ivory/80">
+              <li><a href="#hero" class="hover:text-gold transition-colors">Home &bull; Experience</a></li>
+              <li><a href="#philosophy" class="hover:text-gold transition-colors">Our Ethos &amp; Heritage</a></li>
+              <li><a href="#coffee" class="hover:text-gold transition-colors">Signature Coffee</a></li>
+              <li><a href="#desserts" class="hover:text-gold transition-colors">Haute Pâtisserie</a></li>
+              <li><a href="#menu" class="hover:text-gold transition-colors">Interactive Menu</a></li>
+              <li><a href="#brewing" class="hover:text-gold transition-colors">Extraction Methods</a></li>
+              <li><a href="#reservations" class="hover:text-gold transition-colors">Table Reservations</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Hours & Digest (4 cols) -->
+          <div class="lg:col-span-4 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold block mb-2">The Veloura
+              Gazette</span>
+            <p class="text-xs text-espresso/70 dark:text-ivory/70 leading-relaxed">
+              Subscribe to receive private invitations to seasonal bean arrivals, barista masterclasses, and tasting
+              dinners.
+            </p>
+            <div class="flex items-center gap-2">
+              <input type="email" placeholder="Your email address"
+                class="custom-input px-3 py-2 text-xs rounded bg-ivory-pure dark:bg-espresso-surface border border-gold/40 text-espresso dark:text-ivory flex-1">
+              <button type="button"
+                class="px-4 py-2 rounded bg-gold text-espresso-deep text-xs uppercase font-semibold hover:bg-gold-light transition-colors">
+                Join
+              </button>
+            </div>
+            <p class="text-[10px] text-espresso/50 dark:text-ivory/50">Curated quarterly dispatch. No spam, ever.</p>
+          </div>
+
+        </div>
+
+        <!-- Bottom Footer Legal & Copyright -->
+        <div
+          class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-espresso/60 dark:text-ivory/60 gap-4">
+          <p>&copy; 2026 Caffè Veloura. All rights reserved. Specialty Coffee Roasters &amp; Fine Pâtisserie.</p>
+          <div class="flex items-center gap-6">
+            <span class="text-gold/80 italic font-serif">Milano &bull; Paris &bull; Wien</span>
+            <span>Sample Demo Concept</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </section>
+
+
+  <!-- =========================================================================
+       FLOATING BACK-TO-TOP BUTTON
+       ========================================================================= -->
+  <button id="back-to-top" type="button" aria-label="Return to top of page"
+    class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-gold text-espresso-deep shadow-xl border border-gold-light/40 transform translate-y-4 opacity-0 pointer-events-none transition-all duration-300 hover:bg-gold-light hover:scale-110 focus:outline-none focus:ring-2 focus:ring-gold">
+    <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- =========================================================================
+       LUXURY CART DRAWER (SLIDE-OVER)
+       ========================================================================= -->
+  <div id="cart-drawer-backdrop"
+    class="fixed inset-0 bg-espresso-deep/70 z-50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+  </div>
+  <aside id="cart-drawer"
+    class="fixed top-0 right-0 h-full w-full sm:w-[420px] max-w-full bg-ivory-pure dark:bg-espresso z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between border-l border-gold/30"
+    aria-label="Shopping Cart">
+
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-gold/20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <h3 class="font-serif text-xl font-medium text-espresso dark:text-ivory">Your Tasting Cart</h3>
+      </div>
+      <button id="cart-drawer-close" type="button" aria-label="Close Cart"
+        class="p-2 rounded text-espresso/60 dark:text-ivory/60 hover:text-gold transition-colors focus:outline-none">
+        <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Body (Items list or empty state) -->
+    <div class="flex-1 overflow-y-auto p-6">
+      <!-- Empty Cart State -->
+      <div id="cart-empty-state" class="hidden h-full flex flex-col items-center justify-center text-center py-12">
+        <div
+          class="w-16 h-16 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center mb-4 text-gold">
+          <svg class="w-8 h-8 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        </div>
+        <h4 class="font-serif text-lg font-medium text-espresso dark:text-ivory">Your cart is empty</h4>
+        <p class="text-xs text-espresso/60 dark:text-ivory/60 mt-1 max-w-xs">
+          Explore our signature extractions, fine pastries, and single-origin reserve offerings.
+        </p>
+      </div>
+
+      <!-- Items Container -->
+      <div id="cart-items-list" class="space-y-1"></div>
+    </div>
+
+    <!-- Drawer Footer (Subtotal & Checkout) -->
+    <div id="cart-footer" class="p-6 border-t border-gold/20 bg-ivory/50 dark:bg-espresso-deep/50 space-y-4">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex items-center justify-between text-espresso/70 dark:text-ivory/70">
+          <span>Subtotal</span>
+          <span id="cart-subtotal" class="font-serif font-medium text-espresso dark:text-ivory">€0.00</span>
+        </div>
+        <div class="flex items-center justify-between text-espresso/70 dark:text-ivory/70">
+          <span>Taxes &amp; Service</span>
+          <span class="font-serif font-medium text-espresso dark:text-ivory">Included</span>
+        </div>
+        <div
+          class="pt-2 border-t border-gold/20 flex items-center justify-between text-base font-serif font-semibold text-espresso dark:text-ivory">
+          <span>Total</span>
+          <span id="cart-total" class="text-gold">€0.00</span>
+        </div>
+      </div>
+
+      <button id="cart-checkout-btn" type="button"
+        class="w-full py-3.5 rounded bg-gold hover:bg-gold-light text-espresso-deep font-semibold uppercase tracking-widest text-xs transition-colors shadow-lg flex items-center justify-center gap-2">
+        <span>Proceed to Checkout</span>
+        <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+      <p class="text-[11px] text-center text-espresso/50 dark:text-ivory/50">Handcrafted upon order &bull; Via della
+        Spiga 18, Milano</p>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       CART TOAST NOTIFICATION
+       ========================================================================= -->
+  <div id="cart-toast"
+    class="fixed bottom-6 left-6 z-50 bg-espresso-deep text-ivory-pure border border-gold/40 rounded-lg shadow-2xl p-4 flex items-center gap-4 max-w-sm pointer-events-auto transform translate-y-32 opacity-0 transition-all duration-300">
+    <div class="w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center shrink-0">
+      <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <div class="flex-1 min-w-0 text-xs">
+      <p class="font-semibold text-ivory-pure truncate" id="toast-item-name">Item added</p>
+      <p class="text-gold/80 text-[11px]">Added to your tasting cart</p>
+    </div>
+    <button id="toast-view-cart" type="button"
+      class="px-2.5 py-1 text-[11px] uppercase tracking-wider font-semibold rounded border border-gold/40 text-gold hover:bg-gold hover:text-espresso-deep transition-colors shrink-0">
+      View
+    </button>
+  </div>
+
+  <!-- =========================================================================
+       CHECKOUT SUCCESS MODAL (DEMO)
+       ========================================================================= -->
+  <div id="checkout-success-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-espresso-deep/80 backdrop-blur-sm p-4">
+    <div
+      class="bg-ivory-pure dark:bg-espresso border border-gold/40 rounded-lg max-w-md w-full p-6 sm:p-8 shadow-2xl relative text-center">
+      <div
+        class="w-16 h-16 rounded-full bg-gold/20 border border-gold mx-auto flex items-center justify-center text-gold mb-4">
+        <svg class="w-8 h-8 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 class="font-serif text-2xl font-normal text-espresso dark:text-ivory mb-2">Order Confirmed</h3>
+      <p class="text-xs text-espresso/70 dark:text-ivory/70 mb-6">
+        Grazie! Your artisanal order has been received by our baristas and is being prepared with precision.
+      </p>
+
+      <!-- Order Summary Card -->
+      <div id="checkout-order-summary"
+        class="bg-ivory dark:bg-espresso-deep p-4 rounded border border-gold/25 text-left mb-6">
+      </div>
+
+      <button id="close-checkout-modal" type="button"
+        class="w-full py-3 rounded bg-gold hover:bg-gold-light text-espresso-deep font-semibold uppercase tracking-wider text-xs transition-colors">
+        Return to Veloura
+      </button>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+/* Caffè Veloura Custom Luxury Styles */
+
+/* Custom smooth scroll and root variables */
+:root {
+  --color-espresso: #30211D;
+  --color-espresso-dark: #1F1412;
+  --color-espresso-surface: #3D2B26;
+  --color-ivory: #F5EFE5;
+  --color-ivory-light: #FAF7F2;
+  --color-ivory-dark: #ECE3D3;
+  --color-gold: #C3A36B;
+  --color-gold-light: #D8BD8C;
+  --color-gold-dark: #A58650;
+  --color-gold-subtle: rgba(195, 163, 107, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Ensure smooth theme transitions */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+/* Subtle editorial scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFE5;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1F1412;
+}
+::-webkit-scrollbar-thumb {
+  background: #C3A36B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A58650;
+}
+
+/* Glassmorphism effects */
+.glass-header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card-light {
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(195, 163, 107, 0.25);
+}
+
+.glass-card-dark {
+  background: rgba(48, 33, 29, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(195, 163, 107, 0.2);
+}
+
+/* Scroll reveal classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Zoom effects */
+.hover-zoom-container {
+  overflow: hidden;
+}
+
+.hover-zoom-img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hover-zoom-container:hover .hover-zoom-img {
+  transform: scale(1.06);
+}
+
+/* Gold Accent Underline */
+.gold-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 2px;
+  bottom: -8px;
+  left: 0;
+  background-color: var(--color-gold);
+}
+
+.gold-underline-center::after {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 2px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-gold);
+}
+
+/* Interactive navigation indicator */
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1.5px;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active-nav::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Testimonial slider transitions */
+.carousel-slide {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Form focus ring */
+.custom-input:focus {
+  outline: none;
+  border-color: #C3A36B;
+  box-shadow: 0 0 0 3px rgba(195, 163, 107, 0.2);
+}
+
+/* Cart Badge Pulse Animation */
+@keyframes badge-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+.badge-pop {
+  animation: badge-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Toast Notification */
+.toast-slide-in {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-slide-out {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
