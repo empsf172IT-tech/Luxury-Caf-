@@ -264,12 +264,12 @@ function initBrewingSelector() {
 
       // Update tab styles
       brewTabs.forEach(t => {
-        t.classList.remove('active-brew-tab', 'border-[#C3A36B]', 'bg-[#C3A36B]/10', 'text-[#C3A36B]');
-        t.classList.add('border-transparent', 'text-[#30211D]/70', 'dark:text-[#F5EFE5]/70');
+        t.classList.remove('active-brew-tab', 'border-gold', 'bg-gold/10', 'text-gold');
+        t.classList.add('border-transparent', 'text-espresso/80', 'dark:text-ivory/70');
       });
 
-      tab.classList.add('active-brew-tab', 'border-[#C3A36B]', 'bg-[#C3A36B]/10', 'text-[#C3A36B]');
-      tab.classList.remove('border-transparent', 'text-[#30211D]/70', 'dark:text-[#F5EFE5]/70');
+      tab.classList.add('active-brew-tab', 'border-gold', 'bg-gold/10', 'text-gold');
+      tab.classList.remove('border-transparent', 'text-espresso/80', 'dark:text-ivory/70');
 
       // Animate content swap
       const detailsContainer = document.getElementById('brew-details-container');

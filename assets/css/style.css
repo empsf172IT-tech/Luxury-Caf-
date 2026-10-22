@@ -2,15 +2,15 @@
 
 /* Custom smooth scroll and root variables */
 :root {
-  --color-espresso: #30211D;
-  --color-espresso-dark: #1F1412;
-  --color-espresso-surface: #3D2B26;
+  --color-espresso: #1F1412;
+  --color-espresso-dark: #140C0A;
+  --color-espresso-surface: #2E1E19;
   --color-ivory: #F5EFE5;
   --color-ivory-light: #FAF7F2;
   --color-ivory-dark: #ECE3D3;
   --color-gold: #C3A36B;
   --color-gold-light: #D8BD8C;
-  --color-gold-dark: #A58650;
+  --color-gold-dark: #784E15;
   --color-gold-subtle: rgba(195, 163, 107, 0.15);
 }
 
@@ -325,6 +325,80 @@ body {
   border-radius: 9999px !important;
   z-index: 10 !important;
 }
+
+/* ==========================================================================
+   Overall High-Contrast Typography for Brown & Gold Text (WCAG Compliant)
+   ========================================================================== */
+
+/* Light Mode: Elevate text-gold from pale tan-brown to rich, crisp burnished roast bronze (5.7:1+ contrast on ivory) */
+html:not(.dark) .text-gold:not(.img-price-badge):not(.img-price-badge *):not(.img-tag-badge):not(.text-gold-light):not([class*="from-espresso-deep"] *),
+body:not(.dark) .text-gold:not(.img-price-badge):not(.img-price-badge *):not(.img-tag-badge):not(.text-gold-light):not([class*="from-espresso-deep"] *) {
+  color: #784E15 !important;
+}
+
+/* Ensure text-gold-light and text on dark photo overlays stays radiant champagne gold */
+.text-gold-light,
+[class*="from-espresso-deep"] .text-gold,
+[class*="from-espresso-deep"] .text-gold-light {
+  color: #E8CF9F !important;
+}
+
+/* Hover state on light mode */
+html:not(.dark) .hover\:text-gold:hover,
+body:not(.dark) .hover\:text-gold:hover,
+html:not(.dark) .group:hover .group-hover\:text-gold,
+body:not(.dark) .group:hover .group-hover\:text-gold {
+  color: #5C3A0D !important;
+}
+
+/* Dark Mode: Maintain luminous champagne gold */
+.dark .text-gold:not(.img-price-badge):not(.img-price-badge *):not(.img-tag-badge) {
+  color: #D8BD8C !important;
+}
+
+/* Light Mode: Deepen espresso brown body and secondary text contrast */
+html:not(.dark) .text-espresso,
+body:not(.dark) .text-espresso {
+  color: #1F1412 !important;
+}
+
+html:not(.dark) .text-espresso\/90,
+body:not(.dark) .text-espresso\/90 {
+  color: rgba(31, 20, 18, 0.95) !important;
+}
+
+html:not(.dark) .text-espresso\/80,
+body:not(.dark) .text-espresso\/80 {
+  color: rgba(31, 20, 18, 0.90) !important;
+}
+
+html:not(.dark) .text-espresso\/70,
+body:not(.dark) .text-espresso\/70 {
+  color: rgba(31, 20, 18, 0.85) !important;
+}
+
+html:not(.dark) .text-espresso\/60,
+body:not(.dark) .text-espresso\/60 {
+  color: rgba(31, 20, 18, 0.80) !important;
+}
+
+html:not(.dark) .text-espresso\/50,
+body:not(.dark) .text-espresso\/50 {
+  color: rgba(31, 20, 18, 0.70) !important;
+}
+
+/* Active and inactive brew tabs on light mode */
+html:not(.dark) .active-brew-tab {
+  color: #784E15 !important;
+  border-color: #8C5E1E !important;
+  background-color: rgba(120, 78, 21, 0.1) !important;
+}
+
+html:not(.dark) .brew-tab-btn:not(.active-brew-tab) {
+  color: #1F1412 !important;
+  opacity: 0.85 !important;
+}
+
 
 
 
