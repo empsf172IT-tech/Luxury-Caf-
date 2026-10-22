@@ -16,7 +16,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.5rem;
 }
 
 /* Ensure smooth theme transitions */
@@ -183,3 +183,95 @@ body {
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Custom Drawer Scrollbar */
+.custom-drawer-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-drawer-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-drawer-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(195, 163, 107, 0.3);
+  border-radius: 9999px;
+}
+.custom-drawer-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(195, 163, 107, 0.6);
+}
+
+/* Mobile & Tablet Drawer Active Navigation Item */
+.mobile-nav-link.active-mobile-nav {
+  background-color: rgba(195, 163, 107, 0.14) !important;
+  border-color: rgba(195, 163, 107, 0.45) !important;
+  color: var(--color-gold) !important;
+}
+.mobile-nav-link.active-mobile-nav svg {
+  color: var(--color-gold) !important;
+  opacity: 1 !important;
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Strict Hamburger Button Visibility & Display Rules
+   ========================================================================== */
+#mobile-menu-toggle,
+.hamburger-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+  z-index: 50 !important;
+}
+
+#mobile-menu-toggle svg,
+.hamburger-btn svg {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #C3A36B !important;
+  color: #C3A36B !important;
+}
+
+#mobile-menu-toggle:hover svg,
+.hamburger-btn:hover svg {
+  stroke: currentColor !important;
+  color: currentColor !important;
+}
+
+/* Hide hamburger toggle strictly on desktop screens (1280px and wider) */
+@media (min-width: 1280px) {
+  #mobile-menu-toggle,
+  .hamburger-btn {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Strictly hide navbar cart button on 768px tablet portrait and mobile view */
+@media (max-width: 768px) {
+  #cart-drawer-toggle {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Ensure menu filter CTA buttons are strictly the same uniform size on mobile view */
+@media (max-width: 639px) {
+  .menu-filter-btn {
+    width: 260px !important;
+    max-width: 100% !important;
+    height: 42px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+}
+
+
+
+

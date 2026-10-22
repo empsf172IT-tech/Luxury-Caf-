@@ -80,17 +80,19 @@ function initStickyHeader() {
 }
 
 function initNavigation() {
-  // Mobile drawer controls
+  // Mobile & tablet drawer controls
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileBackdrop = document.getElementById('mobile-menu-backdrop');
   const mobileClose = document.getElementById('mobile-menu-close');
   const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   const openMobileMenu = () => {
     if (!mobileMenu) return;
     mobileMenu.classList.remove('translate-x-full');
     mobileBackdrop?.classList.remove('opacity-0', 'pointer-events-none');
+    mobileToggle?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   };
 
@@ -98,12 +100,20 @@ function initNavigation() {
     if (!mobileMenu) return;
     mobileMenu.classList.add('translate-x-full');
     mobileBackdrop?.classList.add('opacity-0', 'pointer-events-none');
+    mobileToggle?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   };
 
   mobileToggle?.addEventListener('click', openMobileMenu);
   mobileClose?.addEventListener('click', closeMobileMenu);
   mobileBackdrop?.addEventListener('click', closeMobileMenu);
+
+  // Close drawer on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+      closeMobileMenu();
+    }
+  });
 
   // Close mobile nav when clicking internal links
   navLinks.forEach(link => {
@@ -112,7 +122,7 @@ function initNavigation() {
     });
   });
 
-  // Active section scroll spy
+  // Active section scroll spy for both desktop and mobile/tablet drawer
   const sections = document.querySelectorAll('section[id]');
   const desktopNavLinks = document.querySelectorAll('.nav-link');
 
@@ -135,6 +145,11 @@ function initNavigation() {
       if (link.getAttribute('href') === `#${currentId}`) {
         link.classList.add('active-nav', 'text-[#C3A36B]');
       }
+    });
+
+    mobileNavLinks.forEach(link => {
+      const isMatch = link.getAttribute('href') === `#${currentId}`;
+      link.classList.toggle('active-mobile-nav', isMatch);
     });
   };
 

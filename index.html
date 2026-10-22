@@ -68,18 +68,18 @@
        ========================================================================= -->
   <header id="main-header"
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-ivory/95 dark:bg-espresso-deep/95 glass-header border-b border-gold/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between gap-2 sm:gap-4">
 
       <!-- Brand Logo / Wordmark -->
       <a href="#hero"
-        class="flex items-center gap-3.5 shrink-0 mr-6 lg:mr-8 xl:mr-12 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
+        class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
         aria-label="Caffè Veloura Home">
         <div
-          class="relative w-11 h-11 rounded-full border border-gold/70 bg-espresso text-gold dark:bg-gold dark:text-espresso-deep transition-all duration-300 group-hover:scale-105 group-hover:border-gold shadow-sm shrink-0 flex items-center justify-center">
+          class="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-gold/70 bg-espresso text-gold dark:bg-gold dark:text-espresso-deep transition-all duration-300 group-hover:scale-105 group-hover:border-gold shadow-sm shrink-0 flex items-center justify-center">
           <div
-            class="w-9 h-9 rounded-full border border-gold/30 dark:border-espresso-deep/30 flex items-center justify-center">
+            class="w-7 h-7 sm:w-9 sm:h-9 rounded-full border border-gold/30 dark:border-espresso-deep/30 flex items-center justify-center">
             <!-- Bespoke luxury coffee cup with aromatic steam curl SVG -->
-            <svg class="w-5 h-5 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.6"
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.6"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 9h1a3 3 0 0 1 0 6h-1" />
               <path d="M4 9h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z" />
@@ -90,14 +90,14 @@
           </div>
         </div>
         <span
-          class="font-serif text-2xl sm:text-[28px] tracking-[0.04em] font-medium text-espresso dark:text-ivory leading-none group-hover:text-gold transition-colors">
+          class="font-serif text-xl sm:text-2xl lg:text-[28px] tracking-[0.04em] font-medium text-espresso dark:text-ivory leading-none group-hover:text-gold transition-colors">
           Veloura
         </span>
       </a>
 
       <!-- Desktop Navigation Links (with whitespace-nowrap and responsive gaps) -->
       <nav
-        class="hidden lg:flex items-center gap-3.5 xl:gap-6 2xl:gap-7 text-[11px] xl:text-xs uppercase tracking-[0.12em] xl:tracking-[0.16em] font-medium whitespace-nowrap"
+        class="hidden xl:flex items-center gap-4 2xl:gap-6 text-[11px] 2xl:text-xs uppercase tracking-[0.14em] font-medium whitespace-nowrap"
         aria-label="Main Navigation">
         <a href="#hero" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Home</a>
         <a href="#philosophy" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Our Story</a>
@@ -106,15 +106,16 @@
         <a href="#menu" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Menu</a>
         <a href="#brewing" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Brewing</a>
         <a href="#experience" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Experience</a>
+        <a href="#reservations" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Reserve</a>
         <a href="#reviews" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Reviews</a>
         <a href="#contact" class="nav-link py-1 hover:text-gold transition-colors whitespace-nowrap">Visit</a>
       </nav>
 
       <!-- Action Buttons: Theme Toggle & Reserve CTA -->
-      <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <!-- Theme Toggle Button -->
         <button type="button"
-          class="theme-toggle-btn w-9 h-9 rounded-full border border-gold/30 hover:border-gold hover:bg-gold/10 transition-colors focus:outline-none focus:ring-2 focus:ring-gold flex items-center justify-center shrink-0"
+          class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gold/30 hover:border-gold hover:bg-gold/10 transition-colors focus:outline-none focus:ring-2 focus:ring-gold flex items-center justify-center shrink-0"
           aria-label="Toggle theme">
           <!-- Sun Icon (shown in dark mode) -->
           <svg class="theme-sun-icon w-4 h-4 text-gold hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,24 +129,26 @@
           </svg>
         </button>
 
-        <!-- Cart Button with Counter Badge (Replaces old Reserve CTA) -->
+        <!-- Cart Button with Counter Badge (Hidden on mobile and 768px viewports) -->
         <button id="cart-drawer-toggle" type="button" aria-label="Open Cart"
-          class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded border border-gold bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-sm whitespace-nowrap shrink-0 focus:outline-none focus:ring-2 focus:ring-gold relative">
+          class="hidden md:inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded border border-gold bg-gold/10 hover:bg-gold hover:text-espresso-deep text-gold text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-sm whitespace-nowrap shrink-0 focus:outline-none focus:ring-2 focus:ring-gold relative">
           <svg class="w-4 h-4 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
           </svg>
           <span class="hidden sm:inline font-sans">Cart</span>
           <span id="cart-badge"
-            class="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-[11px] font-bold rounded-full bg-gold text-espresso-deep shadow-sm">0</span>
+            class="inline-flex items-center justify-center min-w-[18px] sm:min-w-[20px] h-4.5 sm:h-5 px-1 sm:px-1.5 text-[10px] sm:text-[11px] font-bold rounded-full bg-gold text-espresso-deep shadow-sm">0</span>
         </button>
 
-        <!-- Mobile Menu Hamburger Button -->
+        <!-- Mobile & Tablet Menu Hamburger Button (Always visible on mobile & tablet) -->
         <button id="mobile-menu-toggle" type="button"
-          class="lg:hidden p-2 rounded text-espresso dark:text-ivory hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold shrink-0"
-          aria-label="Open mobile menu">
-          <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+          class="hamburger-btn xl:hidden inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded border border-gold bg-gold/20 hover:bg-gold hover:text-espresso-deep text-gold dark:text-gold focus:outline-none focus:ring-2 focus:ring-gold shrink-0 transition-all duration-200 shadow-sm"
+          aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-5 h-5 text-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3.5" y1="6" x2="20.5" y2="6"></line>
+            <line x1="3.5" y1="12" x2="20.5" y2="12"></line>
+            <line x1="3.5" y1="18" x2="20.5" y2="18"></line>
           </svg>
         </button>
       </div>
@@ -153,68 +156,220 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer Backdrop & Menu -->
+  <!-- Mobile & Tablet Drawer Backdrop & Menu -->
   <div id="mobile-menu-backdrop"
-    class="fixed inset-0 bg-espresso-deep/60 z-50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+    class="fixed inset-0 bg-espresso-deep/75 z-[90] backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
   </div>
   <aside id="mobile-menu"
-    class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-ivory-pure dark:bg-espresso z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-8 border-l border-gold/30 lg:hidden"
-    aria-label="Mobile Navigation">
-    <div>
-      <div class="flex items-center justify-between pb-6 border-b border-gold/20">
-        <span class="font-serif text-2xl text-espresso dark:text-ivory">Veloura</span>
-        <button id="mobile-menu-close" class="p-2 text-espresso dark:text-ivory hover:text-gold"
-          aria-label="Close mobile menu">
-          <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    class="fixed top-0 right-0 h-full w-[88%] sm:w-[75%] md:w-[60%] lg:w-[460px] max-w-md bg-ivory-pure dark:bg-espresso-deep z-[100] shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col border-l border-gold/30 xl:hidden overflow-hidden"
+    aria-label="Mobile and Tablet Navigation">
+    
+    <!-- Drawer Header -->
+    <div class="flex items-center justify-between p-6 sm:p-7 border-b border-gold/20 shrink-0 bg-ivory/80 dark:bg-espresso/80 backdrop-blur-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full border border-gold/70 bg-espresso text-gold dark:bg-gold dark:text-espresso-deep flex items-center justify-center shadow-sm">
+          <svg class="w-4 h-4 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 9h1a3 3 0 0 1 0 6h-1" />
+            <path d="M4 9h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z" />
+            <path d="M7 3.5c0 1.2.8 1.8.8 2.5" />
+            <path d="M11 2.5c0 1.2.8 1.8.8 2.5" />
           </svg>
-        </button>
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl text-espresso dark:text-ivory leading-none block font-medium">Veloura</span>
+          <span class="text-[9px] uppercase tracking-[0.2em] text-gold font-semibold block mt-0.5">Specialty Café</span>
+        </div>
       </div>
-      <nav class="flex flex-col space-y-4 mt-8 text-sm uppercase tracking-widest font-medium">
+      <button id="mobile-menu-close" class="w-9 h-9 rounded-full border border-gold/30 hover:border-gold hover:bg-gold/15 text-espresso dark:text-ivory hover:text-gold flex items-center justify-center transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-gold"
+        aria-label="Close navigation menu">
+        <svg class="w-5 h-5 stroke-current transition-transform duration-200 group-hover:rotate-90" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scrollable Navigation Headers -->
+    <div class="flex-1 overflow-y-auto px-5 sm:px-6 py-5 custom-drawer-scrollbar">
+      <div class="flex items-center justify-between mb-3 px-2">
+        <span class="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold">Explore Veloura</span>
+        <span class="text-[10px] font-serif italic text-espresso/50 dark:text-ivory/50">10 Chapters</span>
+      </div>
+
+      <nav class="flex flex-col space-y-1.5" aria-label="Mobile Navigation Links">
+        <!-- 01: Home -->
         <a href="#hero"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Home</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">01</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Home</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Welcome & Sanctuary</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 02: Our Story -->
         <a href="#philosophy"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Our
-          Story</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">02</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Our Story</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Philosophy & Heritage</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 03: Coffee Collection -->
         <a href="#coffee"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Coffee
-          Collection</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">03</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Coffee Collection</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Single Origins & Espresso</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 04: Artisan Desserts -->
         <a href="#desserts"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Artisan
-          Desserts</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">04</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Artisan Desserts</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">French Haute Pâtisserie</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 05: Digital Menu -->
         <a href="#menu"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Interactive
-          Menu</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">05</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Signature Menu</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Interactive Filter & Order</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 06: Brewing Rituals -->
         <a href="#brewing"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">The Art of
-          Brewing</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">06</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">The Art of Brewing</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">V60, Chemex & Siphon</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 07: Veloura Experience -->
         <a href="#experience"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Inside
-          Veloura</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">07</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Veloura Experience</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Ambience & Craft</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 08: Table Reservations -->
         <a href="#reservations"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Reservations</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">08</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Reservations</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Book an Intimate Table</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 09: Guest Reviews -->
         <a href="#reviews"
-          class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold border-b border-gold/10">Guest
-          Reviews</a>
-        <a href="#contact" class="mobile-nav-link py-2 text-espresso dark:text-ivory hover:text-gold">Visit &
-          Contact</a>
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">09</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Guest Reviews</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Accolades & Stories</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- 10: Visit & Contact -->
+        <a href="#contact"
+          class="mobile-nav-link group flex items-center justify-between px-3.5 py-3 rounded-lg border border-transparent hover:border-gold/30 hover:bg-gold/10 text-espresso dark:text-ivory transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <span class="font-serif text-xs italic text-gold font-semibold w-5">10</span>
+            <div class="flex flex-col">
+              <span class="text-xs uppercase tracking-[0.16em] font-semibold group-hover:text-gold transition-colors">Visit & Contact</span>
+              <span class="text-[10px] text-espresso/50 dark:text-ivory/50 font-sans tracking-wide">Location & Concierge</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-gold/40 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
       </nav>
     </div>
-    <div class="pt-6 border-t border-gold/20 space-y-3">
-      <button id="mobile-cart-toggle" type="button"
-        class="w-full py-3 rounded border border-gold bg-gold/15 text-gold font-semibold tracking-wider text-xs uppercase flex items-center justify-center gap-2 hover:bg-gold hover:text-espresso-deep transition-colors">
-        <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-        </svg>
-        <span>View Cart (<span class="mobile-cart-badge-count">0</span>)</span>
-      </button>
-      <a href="#reservations"
-        class="mobile-nav-link w-full text-center block py-3 rounded bg-gold text-espresso-deep font-semibold tracking-wider text-xs uppercase shadow hover:bg-gold-light transition-colors">
-        Reserve a Table
-      </a>
-      <p class="text-xs text-center text-espresso/60 dark:text-ivory/60 mt-4 font-serif italic">Via della Spiga 18,
-        Milano</p>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-5 sm:p-6 border-t border-gold/20 space-y-3 shrink-0 bg-ivory/90 dark:bg-espresso/90 backdrop-blur-sm">
+      <div class="grid grid-cols-2 gap-2.5">
+        <button id="mobile-cart-toggle" type="button"
+          class="w-full py-2.5 px-3 rounded border border-gold/60 bg-gold/10 text-gold font-semibold tracking-wider text-[11px] uppercase flex items-center justify-center gap-1.5 hover:bg-gold hover:text-espresso-deep transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold">
+          <svg class="w-4 h-4 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="truncate">Cart (<span class="mobile-cart-badge-count font-bold">0</span>)</span>
+        </button>
+
+        <a href="#reservations"
+          class="mobile-nav-link w-full py-2.5 px-3 rounded bg-gold hover:bg-gold-light text-espresso-deep font-semibold tracking-wider text-[11px] uppercase text-center flex items-center justify-center shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold">
+          Reserve
+        </a>
+      </div>
+
+      <div class="flex items-center justify-between text-[11px] text-espresso/60 dark:text-ivory/60 pt-2 border-t border-gold/10">
+        <span class="font-serif italic">Via della Spiga 18, Milano</span>
+        <span class="text-[10px] tracking-wider uppercase font-medium text-gold">Daily 07:00–23:00</span>
+      </div>
     </div>
   </aside>
 
@@ -835,25 +990,25 @@
       </div>
 
       <!-- Interactive Category Filter Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 reveal-on-scroll">
+      <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-12 w-full max-w-xs sm:max-w-none mx-auto reveal-on-scroll">
         <button type="button" data-category="all"
-          class="menu-filter-btn active-filter px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold bg-gold text-espresso-deep shadow-sm">
+          class="menu-filter-btn active-filter w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold bg-gold text-espresso-deep shadow-sm">
           All Offerings
         </button>
         <button type="button" data-category="espresso"
-          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          class="menu-filter-btn w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
           Espresso &amp; Coffee
         </button>
         <button type="button" data-category="signature"
-          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          class="menu-filter-btn w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
           Signature Drinks
         </button>
         <button type="button" data-category="tea"
-          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          class="menu-filter-btn w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
           Tea &amp; Refreshments
         </button>
         <button type="button" data-category="desserts"
-          class="menu-filter-btn px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
+          class="menu-filter-btn w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded text-xs uppercase tracking-wider font-semibold transition-all duration-300 border border-gold/40 text-espresso dark:text-ivory hover:border-gold hover:text-gold">
           Desserts &amp; Pastries
         </button>
       </div>
