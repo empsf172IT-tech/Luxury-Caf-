@@ -272,6 +272,61 @@ body {
   }
 }
 
+/* ==========================================================================
+   Luxury Image Overlay Badges (Pristine High-Contrast Legibility)
+   ========================================================================== */
+.img-price-badge {
+  background: rgba(31, 20, 18, 0.92) !important;
+  color: #FAF7F2 !important;
+  border: 1px solid rgba(195, 163, 107, 0.55) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.8125rem !important; /* 13px */
+  line-height: 1 !important;
+  letter-spacing: 0.05em !important;
+  padding: 0.35rem 0.8rem !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  z-index: 10 !important;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.img-price-badge .currency-symbol {
+  color: #D8BD8C !important;
+  font-weight: 600 !important;
+  font-size: 0.8125rem !important;
+  margin-right: 1px !important;
+}
+
+.group:hover .img-price-badge {
+  border-color: #C3A36B !important;
+  box-shadow: 0 4px 16px rgba(195, 163, 107, 0.25) !important;
+}
+
+.img-tag-badge {
+  background: rgba(31, 20, 18, 0.92) !important;
+  color: #D8BD8C !important;
+  border: 1px solid rgba(195, 163, 107, 0.55) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.6875rem !important; /* 11px */
+  line-height: 1 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 0.35rem 0.8rem !important;
+  border-radius: 9999px !important;
+  z-index: 10 !important;
+}
+
+
 
 
 
