@@ -623,6 +623,75 @@ html.dark body,
   color: #FAF7F2 !important;
 }
 
+/* ==========================================================================
+   Testimonial Carousel Controls & Arrows (Ultra-High Contrast)
+   ========================================================================== */
+#prev-testimonial,
+#next-testimonial {
+  color: #C3A36B !important;
+  border-color: rgba(195, 163, 107, 0.5) !important;
+  transition: all 0.3s ease !important;
+}
+
+#prev-testimonial svg,
+#next-testimonial svg {
+  stroke: #C3A36B !important;
+  color: #C3A36B !important;
+  display: block !important;
+}
+
+#prev-testimonial:hover,
+#next-testimonial:hover {
+  border-color: #C3A36B !important;
+  background-color: rgba(195, 163, 107, 0.15) !important;
+  color: #784E15 !important;
+}
+
+#prev-testimonial:hover svg,
+#next-testimonial:hover svg {
+  stroke: #784E15 !important;
+  color: #784E15 !important;
+}
+
+/* Dark Mode Carousel Controls */
+.dark #prev-testimonial,
+.dark #next-testimonial {
+  color: #D8BD8C !important;
+  border-color: rgba(216, 189, 140, 0.6) !important;
+  background-color: rgba(46, 30, 26, 0.7) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35) !important;
+}
+
+.dark #prev-testimonial svg,
+.dark #next-testimonial svg {
+  stroke: #D8BD8C !important;
+  color: #D8BD8C !important;
+}
+
+.dark #prev-testimonial:hover,
+.dark #next-testimonial:hover {
+  border-color: #E8CF9F !important;
+  background-color: rgba(195, 163, 107, 0.25) !important;
+  color: #FAF7F2 !important;
+  box-shadow: 0 0 12px rgba(195, 163, 107, 0.3) !important;
+}
+
+.dark #prev-testimonial:hover svg,
+.dark #next-testimonial:hover svg {
+  stroke: #FAF7F2 !important;
+  color: #FAF7F2 !important;
+}
+
+.dark .testimonial-dot:not(.w-8) {
+  background-color: rgba(195, 163, 107, 0.45) !important;
+}
+
+.dark .testimonial-dot.w-8 {
+  background-color: #D8BD8C !important;
+  box-shadow: 0 0 10px rgba(216, 189, 140, 0.45) !important;
+}
+
+
 
 
 
