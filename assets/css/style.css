@@ -411,19 +411,78 @@ html.dark body,
   color: #FAF7F2 !important;
 }
 
-/* Dark Mode Headings */
+/* Dark Mode Headings - Ultra-Bright, Brilliant & High-Contrast */
 .dark h1,
 .dark h2,
 .dark h3,
 .dark h4,
 .dark h5,
-.dark h6 {
-  color: #FAF7F2 !important;
+.dark h6,
+.dark h1.text-espresso,
+.dark h2.text-espresso,
+.dark h3.text-espresso,
+.dark h4.text-espresso,
+.dark h5.text-espresso,
+.dark h6.text-espresso,
+.dark h1.dark\:text-ivory,
+.dark h2.dark\:text-ivory,
+.dark h3.dark\:text-ivory,
+.dark h4.dark\:text-ivory,
+.dark h5.dark\:text-ivory,
+.dark h6.dark\:text-ivory,
+.dark .font-serif.text-espresso,
+.dark [class*="font-serif"]:is(h1, h2, h3, h4, h5, h6) {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95), 0 0 2px rgba(255, 255, 255, 0.4) !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  letter-spacing: 0.015em;
+}
+
+/* Radiant Gold Accents inside Headings */
+.dark h1 .text-gold,
+.dark h2 .text-gold,
+.dark h3 .text-gold,
+.dark span.italic.text-gold {
+  color: #F8E2B8 !important;
+  text-shadow: 0 0 12px rgba(248, 226, 184, 0.5) !important;
+}
+
+/* Dark Mode Editorial Serif Quotes & Sub-Headlines */
+.dark p.font-serif:not(.text-gold),
+.dark span.font-serif:not(.text-gold),
+.dark .font-serif.text-espresso,
+.dark .font-serif.dark\:text-ivory {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 1px rgba(255, 255, 255, 0.3) !important;
+}
+
+.dark p.font-serif.text-gold,
+.dark p.font-serif.italic.text-gold {
+  color: #F8E2B8 !important;
+  text-shadow: 0 0 12px rgba(248, 226, 184, 0.5) !important;
+}
+
+/* Radiant Gold Eyebrow Subtitles above Headings */
+.dark span[class*="tracking-"][class*="text-gold"],
+.dark span[class*="tracking-"][class*="text-gold-light"] {
+  color: #F8E2B8 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 8px rgba(248, 226, 184, 0.4) !important;
+}
+
+/* Luminous Gold Section Underlines in Dark Mode */
+.dark .w-16.h-0\.5.bg-gold {
+  background-color: #F0CF85 !important;
+  box-shadow: 0 0 10px rgba(240, 207, 133, 0.6) !important;
 }
 
 /* Dark Mode Navigation Links */
 .dark .nav-link {
-  color: #FAF7F2 !important;
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
 .dark .nav-link:hover,
