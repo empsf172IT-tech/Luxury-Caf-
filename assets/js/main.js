@@ -172,12 +172,12 @@ function initMenuFilters() {
 
       // Update active state of buttons
       filterButtons.forEach(btn => {
-        btn.classList.remove('active-filter', 'bg-[#C3A36B]', 'text-[#F5EFE5]', 'dark:text-[#1F1412]');
-        btn.classList.add('border-[#C3A36B]/40', 'text-[#30211D]', 'dark:text-[#F5EFE5]');
+        btn.classList.remove('active-filter', 'bg-gold', 'text-espresso-deep');
+        btn.classList.add('border-gold/40', 'text-espresso', 'dark:text-ivory');
       });
 
-      button.classList.add('active-filter', 'bg-[#C3A36B]', 'text-[#F5EFE5]', 'dark:text-[#1F1412]');
-      button.classList.remove('border-[#C3A36B]/40');
+      button.classList.add('active-filter', 'bg-gold', 'text-espresso-deep');
+      button.classList.remove('border-gold/40', 'text-espresso', 'dark:text-ivory');
 
       // Filter items with smooth transition
       menuItems.forEach(item => {

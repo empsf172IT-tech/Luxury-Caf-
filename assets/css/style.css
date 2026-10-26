@@ -399,6 +399,231 @@ html:not(.dark) .brew-tab-btn:not(.active-brew-tab) {
   opacity: 0.85 !important;
 }
 
+/* ==========================================================================
+   Dark Mode: Complete High-Contrast Editorial Typography (Crisp & Pristine)
+   ========================================================================== */
+
+/* Dark Mode Base Canvas & Typography */
+html.dark,
+html.dark body,
+.dark body {
+  background-color: #140C0A !important;
+  color: #FAF7F2 !important;
+}
+
+/* Dark Mode Headings */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #FAF7F2 !important;
+}
+
+/* Dark Mode Navigation Links */
+.dark .nav-link {
+  color: #FAF7F2 !important;
+}
+
+.dark .nav-link:hover,
+.dark .nav-link.active-nav {
+  color: #D8BD8C !important;
+}
+
+/* Dark Mode Mobile Drawer */
+.dark #mobile-menu {
+  background-color: #140C0A !important;
+  color: #FAF7F2 !important;
+}
+
+.dark .mobile-nav-link {
+  color: #FAF7F2 !important;
+}
+
+.dark .mobile-nav-link:hover {
+  color: #D8BD8C !important;
+}
+
+/* Dark Mode: Transform espresso text classes into high-contrast luminous ivory */
+.dark .text-espresso:not(.bg-gold):not([class*="bg-gold"]):not(.active-filter):not(.img-price-badge):not(.hamburger-btn):not(.btn-gold),
+.dark .dark\:text-ivory {
+  color: #FAF7F2 !important;
+}
+
+.dark .text-espresso\/90:not(.bg-gold):not([class*="bg-gold"]),
+.dark .dark\:text-ivory\/90 {
+  color: rgba(250, 247, 242, 0.95) !important;
+}
+
+.dark .text-espresso\/80:not(.bg-gold):not([class*="bg-gold"]),
+.dark .dark\:text-ivory\/80 {
+  color: rgba(245, 239, 229, 0.88) !important;
+}
+
+.dark .text-espresso\/70:not(.bg-gold):not([class*="bg-gold"]),
+.dark .dark\:text-ivory\/70 {
+  color: rgba(245, 239, 229, 0.82) !important;
+}
+
+.dark .text-espresso\/60:not(.bg-gold):not([class*="bg-gold"]),
+.dark .dark\:text-ivory\/60 {
+  color: rgba(245, 239, 229, 0.72) !important;
+}
+
+.dark .text-espresso\/50:not(.bg-gold):not([class*="bg-gold"]),
+.dark .dark\:text-ivory\/50 {
+  color: rgba(245, 239, 229, 0.60) !important;
+}
+
+.dark .text-espresso\/40:not(.bg-gold):not([class*="bg-gold"]),
+.dark .dark\:text-ivory\/40 {
+  color: rgba(245, 239, 229, 0.50) !important;
+}
+
+/* Dark Mode Gold Text Accent */
+.dark .text-gold:not(.img-price-badge):not(.img-price-badge *):not(.img-tag-badge) {
+  color: #D8BD8C !important;
+}
+
+.dark .hover\:text-gold:hover,
+.dark .group:hover .group-hover\:text-gold {
+  color: #F0DCBA !important;
+}
+
+/* Keep dark text on solid gold backgrounds in both light & dark mode */
+.dark .bg-gold,
+.dark .bg-gold:not(svg),
+.dark .bg-gold-light,
+.dark [class*="bg-gold"].text-espresso-deep,
+.dark [class*="bg-gold"] > .text-espresso-deep,
+.dark .active-filter,
+.dark .active-filter * {
+  color: #140C0A !important;
+}
+
+.dark .hover\:bg-gold:hover,
+.dark .hover\:bg-gold:hover * {
+  color: #140C0A !important;
+}
+
+/* Dark Mode Form Inputs & Selects */
+.dark input.custom-input,
+.dark textarea.custom-input,
+.dark select.custom-input,
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="tel"],
+.dark input[type="date"],
+.dark textarea,
+.dark select {
+  color: #FAF7F2 !important;
+  background-color: #241714 !important;
+  border-color: rgba(195, 163, 107, 0.4) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgba(245, 239, 229, 0.45) !important;
+}
+
+.dark select option {
+  background-color: #241714 !important;
+  color: #FAF7F2 !important;
+}
+
+/* Dark Mode Interactive Brew Selector Tabs */
+.dark .active-brew-tab {
+  color: #D8BD8C !important;
+  border-color: #C3A36B !important;
+  background-color: rgba(195, 163, 107, 0.18) !important;
+}
+
+.dark .brew-tab-btn:not(.active-brew-tab) {
+  color: rgba(245, 239, 229, 0.85) !important;
+  border-color: transparent !important;
+}
+
+.dark .brew-tab-btn:not(.active-brew-tab):hover {
+  color: #D8BD8C !important;
+}
+
+/* Dark Mode Menu Filter CTA Buttons */
+.dark .menu-filter-btn:not(.active-filter) {
+  color: #FAF7F2 !important;
+  border-color: rgba(195, 163, 107, 0.45) !important;
+}
+
+.dark .menu-filter-btn:not(.active-filter):hover {
+  border-color: #C3A36B !important;
+  color: #D8BD8C !important;
+}
+
+/* Dark Mode Shopping Cart Drawer */
+.dark #cart-drawer {
+  background-color: #140C0A !important;
+  color: #FAF7F2 !important;
+}
+
+.dark #cart-drawer h3,
+.dark #cart-drawer h4,
+.dark #cart-drawer span:not(.text-gold):not([class*="bg-gold"]),
+.dark #cart-drawer p {
+  color: #FAF7F2 !important;
+}
+
+.dark #cart-drawer .text-espresso\/70,
+.dark #cart-drawer .text-espresso\/60,
+.dark #cart-drawer .text-espresso\/50 {
+  color: rgba(245, 239, 229, 0.75) !important;
+}
+
+.dark .cart-qty-btn {
+  color: #FAF7F2 !important;
+  border-color: rgba(195, 163, 107, 0.4) !important;
+}
+
+.dark .cart-qty-btn:hover {
+  border-color: #C3A36B !important;
+  color: #D8BD8C !important;
+}
+
+/* Dark Mode Footer Links */
+.dark footer a:not([class*="bg-gold"]):not(.hover\:bg-gold) {
+  color: rgba(245, 239, 229, 0.85) !important;
+}
+
+.dark footer a:not([class*="bg-gold"]):not(.hover\:bg-gold):hover {
+  color: #D8BD8C !important;
+}
+
+/* Dark Mode Section & Card Backgrounds */
+.dark .bg-ivory,
+.dark .bg-ivory-pure,
+.dark section.bg-ivory,
+.dark section.bg-ivory-pure {
+  background-color: #140C0A;
+}
+
+.dark .bg-ivory-pure.dark\:bg-espresso {
+  background-color: #1F1412 !important;
+}
+
+.dark .bg-ivory-pure.dark\:bg-espresso-surface {
+  background-color: #241714 !important;
+}
+
+.dark .bg-ivory-pure.dark\:bg-espresso-card {
+  background-color: #2E1E1A !important;
+}
+
+/* Modal and Overlays in Dark Mode */
+.dark #checkout-success-modal > div {
+  background-color: #1F1412 !important;
+  color: #FAF7F2 !important;
+}
+
+
 
 
 
